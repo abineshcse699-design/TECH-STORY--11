@@ -1,0 +1,60 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #2b1d1b;
+  height: 60px;
+}
+
+/* Remove default tab border */
+::ng-deep .custom-tabs .mat-mdc-tab-header {
+  border-bottom: none;
+}
+
+/* ALL tab labels (inactive + active) */
+::ng-deep .custom-tabs .mdc-tab__text-label {
+  color: #00c853 !important;   /* green */
+  font-weight: 500;
+}
+
+/* Active tab text */
+::ng-deep .custom-tabs .mdc-tab--active .mdc-tab__text-label {
+  color: #00e676 !important;   /* brighter green */
+  font-weight: 600;
+}
+
+/* Underline indicator */
+::ng-deep .custom-tabs .mdc-tab-indicator__content--underline {
+  border-color: #00c853 !important;
+  border-width: 3px;
+}
+
+/* Optional: ripple color */
+::ng-deep .custom-tabs .mat-ripple-element {
+  background-color: rgba(0, 200, 83, 0.2) !important;
+}
+
+/* Right side buttons */
+.actions {
+  display: flex;
+  gap: 24px;
+}
+
+.action-btn {
+  color: #00c853 !important;
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* Icons */
+.action-btn mat-icon {
+  margin-right: 6px;
+  color: #00c853 !important;
+}
+
+/* Divider */
+::ng-deep .mat-divider {
+  background-color: #00c853 !important;
+  height: 1px;
+}

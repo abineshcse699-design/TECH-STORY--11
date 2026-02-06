@@ -1,0 +1,79 @@
+<div class="page">
+
+  <!-- PREVIEW LABEL -->
+  <div class="preview">
+    <mat-icon>visibility</mat-icon>
+    PREVIEW
+  </div>
+
+  <div class="list-title">
+    List of Characteristics (4)
+  </div>
+
+  <mat-card class="card">
+
+    <!-- TABLE HEADER -->
+    <div class="table-header">
+      <div class="col-small"></div>
+      <div class="col-small"></div>
+      <div class="col-small"></div>
+      <div class="col-english">English</div>
+      <div class="col-example">Example Varieties</div>
+      <div class="col-notes">Notes</div>
+      <div class="col-delete">Delete</div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- DATA -->
+    <div *ngFor="let group of data">
+
+      <!-- GROUP HEADER -->
+      <div class="group-row">
+
+        <div class="col-small arrows">
+          <mat-icon>arrow_upward</mat-icon>
+          <mat-icon>arrow_downward</mat-icon>
+        </div>
+
+        <div class="col-small">{{ group.no }}</div>
+        <div class="col-small">{{ group.code }}</div>
+        <div class="col-small">{{ group.type }}</div>
+
+        <div class="col-english group-title">
+          {{ group.title }}
+        </div>
+
+        <div class="col-example"></div>
+        <div class="col-notes"></div>
+
+        <div class="col-delete">
+          <button mat-icon-button>
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- SUB ROWS -->
+      <div *ngFor="let row of group.rows" class="sub-row">
+
+        <div class="col-small"></div>
+        <div class="col-small"></div>
+        <div class="col-small"></div>
+        <div class="col-small"></div>
+
+        <div class="col-english">{{ row.english }}</div>
+        <div class="col-example">{{ row.example }}</div>
+        <div class="col-notes">{{ row.note }}</div>
+        <div class="col-delete"></div>
+
+      </div>
+
+      <mat-divider></mat-divider>
+
+    </div>
+
+  </mat-card>
+
+</div>

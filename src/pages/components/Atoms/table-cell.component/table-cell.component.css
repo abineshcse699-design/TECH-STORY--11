@@ -1,0 +1,9 @@
+.cell-link {
+  color: #00c853;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cell-link:hover {
+  text-decoration: underline;
+}

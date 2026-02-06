@@ -1,0 +1,9 @@
+.app-button {
+  color: #00c853;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.app-button:hover {
+  background-color: rgba(0, 200, 83, 0.08);
+}

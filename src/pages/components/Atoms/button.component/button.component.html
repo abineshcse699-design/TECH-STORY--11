@@ -1,0 +1,10 @@
+<button
+  mat-button
+  class="app-button"
+  [disabled]="disabled">
+
+  <app-icon *ngIf="icon" [name]="icon"></app-icon>
+
+  <ng-content></ng-content>
+
+</button>

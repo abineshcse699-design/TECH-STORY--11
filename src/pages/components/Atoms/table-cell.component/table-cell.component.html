@@ -1,0 +1,7 @@
+<ng-container *ngIf="!isLink">
+  {{ value }}
+</ng-container>
+
+<ng-container *ngIf="isLink">
+  <a href="#" class="cell-link">{{ value }}</a>
+</ng-container>

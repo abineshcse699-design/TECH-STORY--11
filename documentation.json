@@ -2,6 +2,81 @@
     "pipes": [],
     "interfaces": [
         {
+            "name": "ApplicationData",
+            "id": "interface-ApplicationData-77299d3b6048e335d2918d51d92dade6f78be76531b7532b53390ecf8718afb9f7328c3d23a50f9b6cbf91f9a92b71e2a729c62358fd4e6de3ac8e0167845e02",
+            "file": "src/app/pages 1/components/components.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\nimport { MatTableModule } from '@angular/material/table';\r\n\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSortModule } from '@angular/material/sort';\r\n\r\nexport interface ApplicationData {\r\n  reference: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'app-components',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTabsModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    MatDividerModule,\r\n    MatTableModule,\r\n    MatMenuModule,\r\n    MatSortModule,\r\n  ],\r\n  templateUrl: './components.html',\r\n  styleUrls: ['./components.css']\r\n})\r\nexport class Components {\r\n\r\n\r\n  displayedColumns: string[] = [\r\n    'reference',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource: ApplicationData[] = [\r\n    {\r\n      reference: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    }\r\n  ];\r\n\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "application",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "breeder",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "crop",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "denomination",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "modified",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "reference",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        },
+        {
             "name": "User",
             "id": "interface-User-d4821beac0e4a852e513391b7470981c4353fdd95a18628bb68136c8695b489ee15b926e2e5031bc26cf30e1508e0a362c3ee13a06734702b4d15af140e485d5",
             "file": "src/stories/user.ts",
@@ -34,8 +109,289 @@
     "directives": [],
     "components": [
         {
+            "name": "ActionButtonsComponent",
+            "id": "component-ActionButtonsComponent-697cac53cf9a9fb21bc293b3cea6c139ce90c0d9d80aa64106dca314c8be364a48cc6842fc82833fb1ee50bb0787f2a33fd90f9430f2098b64750e00d4ce95eb",
+            "file": "src/pages/components/molecules/action-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-action-buttons",
+            "styleUrls": [],
+            "styles": [
+                "\n    .actions {\n      display: flex;\n      gap: 24px;\n      align-items: center;\n    }\n  "
+            ],
+            "template": "<div class=\"actions\">\n  <app-button icon=\"filter_list\" (click)=\"onFilter()\">\n    Show Filters\n  </app-button>\n\n  <app-button icon=\"view_column\" (click)=\"onColumns()\">\n    Columns\n  </app-button>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "columnClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "filterClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onColumns",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onFilter",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ButtonComponent } from '../Atoms/button.component/button.component';\r\n\r\n@Component({\r\n  selector: 'app-action-buttons',\r\n  standalone: true,\r\n  imports: [CommonModule, ButtonComponent],\r\n  template: `\r\n    <div class=\"actions\">\r\n      <app-button icon=\"filter_list\" (click)=\"onFilter()\">\r\n        Show Filters\r\n      </app-button>\r\n\r\n      <app-button icon=\"view_column\" (click)=\"onColumns()\">\r\n        Columns\r\n      </app-button>\r\n    </div>\r\n  `,\r\n  styles: [`\r\n    .actions {\r\n      display: flex;\r\n      gap: 24px;\r\n      align-items: center;\r\n    }\r\n  `]\r\n})\r\nexport class ActionButtonsComponent {\r\n\r\n  @Output() filterClick = new EventEmitter<void>();\r\n  @Output() columnClick = new EventEmitter<void>();\r\n\r\n  onFilter() {\r\n    this.filterClick.emit();\r\n  }\r\n\r\n  onColumns() {\r\n    this.columnClick.emit();\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .actions {\n      display: flex;\n      gap: 24px;\n      align-items: center;\n    }\n  \n",
+            "extends": []
+        },
+        {
+            "name": "ActionButtonsComponent",
+            "id": "component-ActionButtonsComponent-697cac53cf9a9fb21bc293b3cea6c139ce90c0d9d80aa64106dca314c8be364a48cc6842fc82833fb1ee50bb0787f2a33fd90f9430f2098b64750e00d4ce95eb-1",
+            "file": "src/pages/components/molecules/tabs-group.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-action-buttons",
+            "styleUrls": [],
+            "styles": [
+                "\n    .actions {\n      display: flex;\n      gap: 24px;\n      align-items: center;\n    }\n  "
+            ],
+            "template": "<div class=\"actions\">\n  <app-button icon=\"filter_list\" (click)=\"onFilter()\">\n    Show Filters\n  </app-button>\n\n  <app-button icon=\"view_column\" (click)=\"onColumns()\">\n    Columns\n  </app-button>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "columnClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "filterClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onColumns",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onFilter",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ButtonComponent } from '../Atoms/button.component/button.component';\r\n\r\n@Component({\r\n  selector: 'app-action-buttons',\r\n  standalone: true,\r\n  imports: [CommonModule, ButtonComponent],\r\n  template: `\r\n    <div class=\"actions\">\r\n      <app-button icon=\"filter_list\" (click)=\"onFilter()\">\r\n        Show Filters\r\n      </app-button>\r\n\r\n      <app-button icon=\"view_column\" (click)=\"onColumns()\">\r\n        Columns\r\n      </app-button>\r\n    </div>\r\n  `,\r\n  styles: [`\r\n    .actions {\r\n      display: flex;\r\n      gap: 24px;\r\n      align-items: center;\r\n    }\r\n  `]\r\n})\r\nexport class ActionButtonsComponent {\r\n\r\n  @Output() filterClick = new EventEmitter<void>();\r\n  @Output() columnClick = new EventEmitter<void>();\r\n\r\n  onFilter() {\r\n    this.filterClick.emit();\r\n  }\r\n\r\n  onColumns() {\r\n    this.columnClick.emit();\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .actions {\n      display: flex;\n      gap: 24px;\n      align-items: center;\n    }\n  \n",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ActionButtonsComponent-1"
+        },
+        {
+            "name": "ActionMenuComponent",
+            "id": "component-ActionMenuComponent-7ea978bfedf65ae14723bbde0752fbdea05657c8355868821a68884cfd3973001c47eaeec0c8bd6de98450c517a56c1590e5a769fbaffd1efdd75217f416c358",
+            "file": "src/pages/components/molecules/action-menu.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-action-menu",
+            "styleUrls": [],
+            "styles": [
+                "\n    button[mat-icon-button] {\n      color: #555;\n    }\n\n    button[mat-menu-item] {\n      font-size: 14px;\n    }\n  "
+            ],
+            "template": "<button mat-icon-button [matMenuTriggerFor]=\"menu\">\n  <mat-icon>more_horiz</mat-icon>\n</button>\n\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item (click)=\"onView()\">View</button>\n  <button mat-menu-item (click)=\"onEdit()\">Edit</button>\n  <button mat-menu-item (click)=\"onDelete()\">Delete</button>\n</mat-menu>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "delete",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 41,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "edit",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 40,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "view",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onDelete",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 45,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onEdit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onView",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatMenuModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'app-action-menu',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatMenuModule,\r\n    MatButtonModule,\r\n    MatIconModule\r\n  ],\r\n  template: `\r\n    <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n      <mat-icon>more_horiz</mat-icon>\r\n    </button>\r\n\r\n    <mat-menu #menu=\"matMenu\">\r\n      <button mat-menu-item (click)=\"onView()\">View</button>\r\n      <button mat-menu-item (click)=\"onEdit()\">Edit</button>\r\n      <button mat-menu-item (click)=\"onDelete()\">Delete</button>\r\n    </mat-menu>\r\n  `,\r\n  styles: [`\r\n    button[mat-icon-button] {\r\n      color: #555;\r\n    }\r\n\r\n    button[mat-menu-item] {\r\n      font-size: 14px;\r\n    }\r\n  `]\r\n})\r\nexport class ActionMenuComponent {\r\n\r\n  @Output() view = new EventEmitter<void>();\r\n  @Output() edit = new EventEmitter<void>();\r\n  @Output() delete = new EventEmitter<void>();\r\n\r\n  onView() { this.view.emit(); }\r\n  onEdit() { this.edit.emit(); }\r\n  onDelete() { this.delete.emit(); }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    button[mat-icon-button] {\n      color: #555;\n    }\n\n    button[mat-menu-item] {\n      font-size: 14px;\n    }\n  \n",
+            "extends": []
+        },
+        {
             "name": "App",
-            "id": "component-App-5d8992272a48b63921f544e0bf9e80f0872faafc0d850663d6e483f435ce0fcba2fdaa094381156ad62c49d49ad722975abc63f297f887747ed069dc9862fd71",
+            "id": "component-App-4e392e16ed0c577ea267328ab149a2d6f9b32bc16da28509eb7a35b9e4fdd9ab5076d3022e952d622dc748ec54e5690aa108f5148952ff497f14bf57c567afc0",
             "file": "src/app/app.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -62,7 +418,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 12,
+                    "line": 14,
                     "modifierKind": [
                         124,
                         148
@@ -81,18 +437,26 @@
                 },
                 {
                     "name": "Header"
+                },
+                {
+                    "name": "Components",
+                    "type": "component"
+                },
+                {
+                    "name": "Components2",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { Header } from \"../pages/header/header\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [RouterOutlet, Header],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n  protected readonly title = signal('techstory');\r\n}\r\n",
+            "sourceCode": "import { Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { Header } from \"../pages/header/header\";\r\nimport { Components } from \"./pages 1/components/components\";\r\nimport { Components2 } from \"./pages 1/components2/components2\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [RouterOutlet, Header, Components, Components2],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n  protected readonly title = signal('techstory');\r\n}\r\n",
             "styleUrl": "./app.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "\r\n<app-header></app-header>\r\n\r\n<router-outlet></router-outlet>\r\n"
+            "templateData": "\r\n<app-components></app-components>\r\n<app-components2></app-components2>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -229,6 +593,310 @@
             }
         },
         {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-5022b3583b16ee1b5a65e48164c85bd9fb7a70f55551c284e5723244c5c1979276612fd939a547ee1a042bf66ad37d555fba77aafac1316b0fb80b1cb10c3aa7-1",
+            "file": "src/pages/components/Atoms/button.component/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [
+                "./button.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "IconComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { IconComponent } from '../icon.component/icon.component';   // 👈 ADD THIS\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatButtonModule,\r\n    IconComponent   // 👈 ADD THIS\r\n  ],\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.css']\r\n})\r\nexport class ButtonComponent {\r\n  @Input() icon?: string;\r\n  @Input() disabled: boolean = false;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".app-button {\r\n  color: #00c853;\r\n  text-transform: none;\r\n  font-weight: 500;\r\n}\r\n\r\n.app-button:hover {\r\n  background-color: rgba(0, 200, 83, 0.08);\r\n}\r\n",
+                    "styleUrl": "./button.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "<button\r\n  mat-button\r\n  class=\"app-button\"\r\n  [disabled]=\"disabled\">\r\n\r\n  <app-icon *ngIf=\"icon\" [name]=\"icon\"></app-icon>\r\n\r\n  <ng-content></ng-content>\r\n\r\n</button>\r\n"
+        },
+        {
+            "name": "Components",
+            "id": "component-Components-77299d3b6048e335d2918d51d92dade6f78be76531b7532b53390ecf8718afb9f7328c3d23a50f9b6cbf91f9a92b71e2a729c62358fd4e6de3ac8e0167845e02",
+            "file": "src/app/pages 1/components/components.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-components",
+            "styleUrls": [
+                "./components.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./components.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "dataSource",
+                    "defaultValue": "[\r\n    {\r\n      reference: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    }\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationData[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 52
+                },
+                {
+                    "name": "displayedColumns",
+                    "defaultValue": "[\r\n    'reference',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 42
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTabsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatDividerModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTableModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatMenuModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatSortModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\nimport { MatTableModule } from '@angular/material/table';\r\n\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSortModule } from '@angular/material/sort';\r\n\r\nexport interface ApplicationData {\r\n  reference: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'app-components',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTabsModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    MatDividerModule,\r\n    MatTableModule,\r\n    MatMenuModule,\r\n    MatSortModule,\r\n  ],\r\n  templateUrl: './components.html',\r\n  styleUrls: ['./components.css']\r\n})\r\nexport class Components {\r\n\r\n\r\n  displayedColumns: string[] = [\r\n    'reference',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource: ApplicationData[] = [\r\n    {\r\n      reference: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    }\r\n  ];\r\n\r\n}\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".header-container {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 0 20px;\r\n  background-color: #2b1d1b;\r\n  height: 60px;\r\n}\r\n\r\n/* Remove default tab border */\r\n::ng-deep .custom-tabs .mat-mdc-tab-header {\r\n  border-bottom: none;\r\n}\r\n\r\n/* ALL tab labels (inactive + active) */\r\n::ng-deep .custom-tabs .mdc-tab__text-label {\r\n  color: #00c853 !important;   /* green */\r\n  font-weight: 500;\r\n}\r\n\r\n/* Active tab text */\r\n::ng-deep .custom-tabs .mdc-tab--active .mdc-tab__text-label {\r\n  color: #00e676 !important;   /* brighter green */\r\n  font-weight: 600;\r\n}\r\n\r\n/* Underline indicator */\r\n::ng-deep .custom-tabs .mdc-tab-indicator__content--underline {\r\n  border-color: #00c853 !important;\r\n  border-width: 3px;\r\n}\r\n\r\n/* Optional: ripple color */\r\n::ng-deep .custom-tabs .mat-ripple-element {\r\n  background-color: rgba(0, 200, 83, 0.2) !important;\r\n}\r\n\r\n/* Right side buttons */\r\n.actions {\r\n  display: flex;\r\n  gap: 24px;\r\n}\r\n\r\n.action-btn {\r\n  color: #00c853 !important;\r\n  text-transform: none;\r\n  font-weight: 500;\r\n}\r\n\r\n/* Icons */\r\n.action-btn mat-icon {\r\n  margin-right: 6px;\r\n  color: #00c853 !important;\r\n}\r\n\r\n/* Divider */\r\n::ng-deep .mat-divider {\r\n  background-color: #00c853 !important;\r\n  height: 1px;\r\n}\r\n",
+                    "styleUrl": "./components.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"header-container\">\r\n\r\n  <!-- LEFT SIDE TABS -->\r\n  <mat-tab-group\r\n    class=\"custom-tabs\"\r\n    animationDuration=\"0ms\"\r\n    mat-stretch-tabs=\"false\">\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        In Progress (5)\r\n      </ng-template>\r\n    </mat-tab>\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        Submitted (3)\r\n      </ng-template>\r\n    </mat-tab>\r\n\r\n  </mat-tab-group>\r\n\r\n  <!-- RIGHT SIDE ACTIONS -->\r\n  <div class=\"actions\">\r\n    <button mat-button class=\"action-btn\">\r\n      <mat-icon>filter_list</mat-icon>\r\n      Show filters\r\n    </button>\r\n\r\n    <button mat-button class=\"action-btn\">\r\n      <mat-icon>view_column</mat-icon>\r\n      Columns\r\n    </button>\r\n  </div>\r\n\r\n</div>\r\n\r\n<mat-divider></mat-divider>\r\n\r\n\r\n<div class=\"table-container\">\r\n\r\n  <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z1\">\r\n\r\n    <!-- Reference -->\r\n    <ng-container matColumnDef=\"reference\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        International Reference Number\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        <a href=\"#\" class=\"ref-link\">{{ element.reference }}</a>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Application -->\r\n    <ng-container matColumnDef=\"application\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Application data for\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.application }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Modified -->\r\n    <ng-container matColumnDef=\"modified\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Modified on\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.modified }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Crop -->\r\n    <ng-container matColumnDef=\"crop\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Crop\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.crop }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Denomination -->\r\n    <ng-container matColumnDef=\"denomination\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Proposed variety denomination\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.denomination }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Breeder -->\r\n    <ng-container matColumnDef=\"breeder\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Breeder/Submitter reference\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.breeder }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions -->\r\n    <ng-container matColumnDef=\"actions\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Actions\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n          <mat-icon>more_horiz</mat-icon>\r\n        </button>\r\n\r\n        <mat-menu #menu=\"matMenu\">\r\n          <button mat-menu-item>View</button>\r\n          <button mat-menu-item>Edit</button>\r\n          <button mat-menu-item>Delete</button>\r\n        </mat-menu>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n\r\n  </table>\r\n\r\n</div>\r\n"
+        },
+        {
+            "name": "Components2",
+            "id": "component-Components2-5d89825ab480d26a46ac6c790ce16af3d0f067b8143509473cfc926daabc4a5add6e9925bcaee5d1fa524a0438eff24a8ff90d83b118a6daa4449870490cf6d8",
+            "file": "src/app/pages 1/components2/components2.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-components2",
+            "styleUrls": [
+                "./components2.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./components2.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "data",
+                    "defaultValue": "[\r\n    {\r\n      no: 1,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Tree: vigor',\r\n      rows: [\r\n        { english: 'very weak', example: 'Grenadier, Nield’s Drooper', note: 1 },\r\n        { english: 'very weak to weak', example: 'James Grieve, Redkan', note: 2 },\r\n        { english: 'weak', example: 'Alkmene, Regine', note: 3 },\r\n        { english: 'weak to medium', example: 'Piros, Pomforyou, Renora', note: 4 },\r\n        { english: 'medium', example: 'Gala, Pinova, Trajan', note: 5 },\r\n        { english: 'medium to strong', example: 'Dalili, Pia, Pivita', note: 6 },\r\n        { english: 'strong', example: 'Elstar, Rafzubin, Santana', note: 7 },\r\n        { english: 'strong to very strong', example: 'Bay 3484, Collina, Cripps Pink', note: 8 },\r\n        { english: 'very strong', example: 'Gloster, Ingrid Marie', note: 9 }\r\n      ]\r\n    },\r\n    {\r\n      no: 2,\r\n      code: 'QL',\r\n      type: 'VG',\r\n      title: 'Tree: type',\r\n      rows: [\r\n        { english: 'columnar', example: 'MacExcel, Wijcik', note: 1 },\r\n        { english: 'ramified', example: 'Elstar, Golden Delicious', note: 2 }\r\n      ]\r\n    },\r\n    {\r\n      no: 3,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Leaf: length',\r\n      rows: [\r\n        { english: 'very short', example: 'Kasumi', note: 1 },\r\n        { english: 'medium', example: '', note: 2 },\r\n        { english: '5', example: 'variety B', note: 3 }\r\n      ]\r\n    },\r\n    {\r\n      no: 4,\r\n      code: 'QL',\r\n      type: 'MS',\r\n      title: 'resistance test',\r\n      rows: [\r\n        { english: 'absent', example: '', note: 1 },\r\n        { english: 'present', example: '', note: 9 }\r\n      ]\r\n    }\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatDividerModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\n\r\n@Component({\r\n  selector: 'app-components2',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatIconModule,\r\n    MatButtonModule,\r\n    MatCardModule,\r\n    MatDividerModule\r\n  ],\r\n  templateUrl: './components2.html',\r\n  styleUrls: ['./components2.css']\r\n})\r\nexport class Components2 {\r\n\r\n  data = [\r\n    {\r\n      no: 1,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Tree: vigor',\r\n      rows: [\r\n        { english: 'very weak', example: 'Grenadier, Nield’s Drooper', note: 1 },\r\n        { english: 'very weak to weak', example: 'James Grieve, Redkan', note: 2 },\r\n        { english: 'weak', example: 'Alkmene, Regine', note: 3 },\r\n        { english: 'weak to medium', example: 'Piros, Pomforyou, Renora', note: 4 },\r\n        { english: 'medium', example: 'Gala, Pinova, Trajan', note: 5 },\r\n        { english: 'medium to strong', example: 'Dalili, Pia, Pivita', note: 6 },\r\n        { english: 'strong', example: 'Elstar, Rafzubin, Santana', note: 7 },\r\n        { english: 'strong to very strong', example: 'Bay 3484, Collina, Cripps Pink', note: 8 },\r\n        { english: 'very strong', example: 'Gloster, Ingrid Marie', note: 9 }\r\n      ]\r\n    },\r\n    {\r\n      no: 2,\r\n      code: 'QL',\r\n      type: 'VG',\r\n      title: 'Tree: type',\r\n      rows: [\r\n        { english: 'columnar', example: 'MacExcel, Wijcik', note: 1 },\r\n        { english: 'ramified', example: 'Elstar, Golden Delicious', note: 2 }\r\n      ]\r\n    },\r\n    {\r\n      no: 3,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Leaf: length',\r\n      rows: [\r\n        { english: 'very short', example: 'Kasumi', note: 1 },\r\n        { english: 'medium', example: '', note: 2 },\r\n        { english: '5', example: 'variety B', note: 3 }\r\n      ]\r\n    },\r\n    {\r\n      no: 4,\r\n      code: 'QL',\r\n      type: 'MS',\r\n      title: 'resistance test',\r\n      rows: [\r\n        { english: 'absent', example: '', note: 1 },\r\n        { english: 'present', example: '', note: 9 }\r\n      ]\r\n    }\r\n  ];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".page {\r\n  background: #2b1d1b;\r\n  min-height: 100vh;\r\n  padding: 30px;\r\n}\r\n\r\n/* Preview */\r\n.preview {\r\n  color: #ff9800;\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 6px;\r\n  font-weight: 600;\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.list-title {\r\n  color: #c7c7c7;\r\n  margin-bottom: 16px;\r\n  font-weight: 500;\r\n}\r\n\r\n/* Card */\r\n.card {\r\n  padding: 0;\r\n  border-radius: 8px;\r\n  overflow: hidden;\r\n}\r\n\r\n/* Header */\r\n.table-header {\r\n  display: flex;\r\n  padding: 14px;\r\n  background: #f5f5f5;\r\n  font-weight: 600;\r\n}\r\n\r\n/* Columns */\r\n.col-small { width: 60px; }\r\n.col-english { flex: 2; }\r\n.col-example { flex: 3; }\r\n.col-notes { width: 80px; }\r\n.col-delete { width: 80px; text-align: center; }\r\n\r\n/* Group row */\r\n.group-row {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 12px 14px;\r\n  background: #fafafa;\r\n  font-weight: 600;\r\n}\r\n\r\n.group-title {\r\n  color: #00695c;\r\n}\r\n\r\n/* Sub rows */\r\n.sub-row {\r\n  display: flex;\r\n  padding: 10px 14px;\r\n  background: #ffffff;\r\n}\r\n\r\n.sub-row:hover {\r\n  background: #f9f9f9;\r\n}\r\n\r\n/* Arrows */\r\n.arrows {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 4px;\r\n  color: #00695c;\r\n  font-size: 18px;\r\n}\r\n",
+                    "styleUrl": "./components2.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"page\">\r\n\r\n  <!-- PREVIEW LABEL -->\r\n  <div class=\"preview\">\r\n    <mat-icon>visibility</mat-icon>\r\n    PREVIEW\r\n  </div>\r\n\r\n  <div class=\"list-title\">\r\n    List of Characteristics (4)\r\n  </div>\r\n\r\n  <mat-card class=\"card\">\r\n\r\n    <!-- TABLE HEADER -->\r\n    <div class=\"table-header\">\r\n      <div class=\"col-small\"></div>\r\n      <div class=\"col-small\"></div>\r\n      <div class=\"col-small\"></div>\r\n      <div class=\"col-english\">English</div>\r\n      <div class=\"col-example\">Example Varieties</div>\r\n      <div class=\"col-notes\">Notes</div>\r\n      <div class=\"col-delete\">Delete</div>\r\n    </div>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <!-- DATA -->\r\n    <div *ngFor=\"let group of data\">\r\n\r\n      <!-- GROUP HEADER -->\r\n      <div class=\"group-row\">\r\n\r\n        <div class=\"col-small arrows\">\r\n          <mat-icon>arrow_upward</mat-icon>\r\n          <mat-icon>arrow_downward</mat-icon>\r\n        </div>\r\n\r\n        <div class=\"col-small\">{{ group.no }}</div>\r\n        <div class=\"col-small\">{{ group.code }}</div>\r\n        <div class=\"col-small\">{{ group.type }}</div>\r\n\r\n        <div class=\"col-english group-title\">\r\n          {{ group.title }}\r\n        </div>\r\n\r\n        <div class=\"col-example\"></div>\r\n        <div class=\"col-notes\"></div>\r\n\r\n        <div class=\"col-delete\">\r\n          <button mat-icon-button>\r\n            <mat-icon>delete_outline</mat-icon>\r\n          </button>\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <!-- SUB ROWS -->\r\n      <div *ngFor=\"let row of group.rows\" class=\"sub-row\">\r\n\r\n        <div class=\"col-small\"></div>\r\n        <div class=\"col-small\"></div>\r\n        <div class=\"col-small\"></div>\r\n        <div class=\"col-small\"></div>\r\n\r\n        <div class=\"col-english\">{{ row.english }}</div>\r\n        <div class=\"col-example\">{{ row.example }}</div>\r\n        <div class=\"col-notes\">{{ row.note }}</div>\r\n        <div class=\"col-delete\"></div>\r\n\r\n      </div>\r\n\r\n      <mat-divider></mat-divider>\r\n\r\n    </div>\r\n\r\n  </mat-card>\r\n\r\n</div>\r\n"
+        },
+        {
+            "name": "DividerComponent",
+            "id": "component-DividerComponent-882a71228e217bff94d4cb0042929696e897cf5274bfac81e60205b9e6b07b1fb1b1e59d6cfd83409618c7ffbbe570e2649c29ee80b6c8aa1049cadb53e04a8f",
+            "file": "src/pages/components/Atoms/divider.component/divider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-divider",
+            "styleUrls": [
+                "./divider.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./divider.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatDividerModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\n\r\n@Component({\r\n  selector: 'app-divider',\r\n  standalone: true,\r\n  imports: [MatDividerModule],\r\n  templateUrl: './divider.component.html',\r\n  styleUrls: ['./divider.component.css']\r\n})\r\nexport class DividerComponent {}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "::ng-deep .mat-divider {\r\n  background-color: #00c853;\r\n  height: 1px;\r\n}\r\n",
+                    "styleUrl": "./divider.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<mat-divider></mat-divider>\r\n"
+        },
+        {
             "name": "Footer",
             "id": "component-Footer-c713122f84dd7857b239c71b811822d64f7a2baa0d3e53b0b7656c1441ce2079a074f81143f7e4b12f6c9679dc979157b1f47d210936ed90203ee3ef78b1c6e0",
             "file": "src/pages/footer/footer.ts",
@@ -264,7 +932,7 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>footer works!</p>\r\n"
+            "templateData": "<p>footer works!</p>\r\n<h1>abiw</h1>\r\n"
         },
         {
             "name": "Header",
@@ -568,6 +1236,64 @@
             "extends": []
         },
         {
+            "name": "IconComponent",
+            "id": "component-IconComponent-810958daf771c538727b2056a47306fcb42012dbcadc045a684a7e500c896848c8c49a06fb33d93af57f019cb45587e3514deb75c4c403f130f2af87beecf936",
+            "file": "src/pages/components/Atoms/icon.component/icon.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-icon",
+            "styleUrls": [
+                "./icon.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./icon.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'app-icon',\r\n  standalone: true,\r\n  imports: [MatIconModule],\r\n  templateUrl: './icon.component.html',\r\n  styleUrls: ['./icon.component.css']\r\n})\r\nexport class IconComponent {\r\n  @Input() name!: string;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "mat-icon {\r\n  margin-right: 6px;\r\n  color: #00c853;\r\n  vertical-align: middle;\r\n}\r\n",
+                    "styleUrl": "./icon.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<mat-icon>{{ name }}</mat-icon>\r\n"
+        },
+        {
             "name": "PageComponent",
             "id": "component-PageComponent-21dd6eb370b4983b5c21c84d40e6f54d266a9d9af9889e6e76b35c43058bd53b3e451bad089d5adf4bea46647ba10265a2fa8cb15630398e75636307d4817fc6",
             "file": "src/stories/page.component.ts",
@@ -660,6 +1386,131 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "TabComponent",
+            "id": "component-TabComponent-a4d00d7cd8f0694799d80532b71094e78acca8f35ba91e043ef2770a6a3760771850498ed61adaf1ef49bfb290a47423514d9436559fa82887c4f4346d6521a5",
+            "file": "src/pages/components/Atoms/tab.component/tab.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-tab",
+            "styleUrls": [
+                "./tab.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./tab.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatTabsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\n\r\n@Component({\r\n  selector: 'app-tab',\r\n  standalone: true,\r\n  imports: [MatTabsModule],\r\n  templateUrl: './tab.component.html',\r\n  styleUrls: ['./tab.component.css']\r\n})\r\nexport class TabComponent {\r\n  @Input() label!: string;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "::ng-deep .mdc-tab__text-label {\r\n  color: #00c853;\r\n  font-weight: 500;\r\n}\r\n\r\n::ng-deep .mdc-tab--active .mdc-tab__text-label {\r\n  color: #00e676;\r\n  font-weight: 600;\r\n}\r\n\r\n::ng-deep .mdc-tab-indicator__content--underline {\r\n  border-color: #00c853;\r\n  border-width: 3px;\r\n}\r\n",
+                    "styleUrl": "./tab.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<mat-tab>\r\n  <ng-template mat-tab-label>\r\n    {{ label }}\r\n  </ng-template>\r\n</mat-tab>\r\n"
+        },
+        {
+            "name": "TableCellComponent",
+            "id": "component-TableCellComponent-93eddb6a9ef1ab15d03bf501c6c7667ebd0bf13ce4b381ef0151a7f392f9a816fecb13d980d176db9b555f9e8815407b5d309fc143bb199c869b012a09e85739",
+            "file": "src/pages/components/Atoms/table-cell.component/table-cell.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-table-cell",
+            "styleUrls": [
+                "./table-cell.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./table-cell.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "isLink",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-table-cell',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './table-cell.component.html',\r\n  styleUrls: ['./table-cell.component.css']\r\n})\r\nexport class TableCellComponent {\r\n  @Input() value!: string;\r\n  @Input() isLink: boolean = false;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".cell-link {\r\n  color: #00c853;\r\n  text-decoration: none;\r\n  font-weight: 500;\r\n}\r\n\r\n.cell-link:hover {\r\n  text-decoration: underline;\r\n}\r\n",
+                    "styleUrl": "./table-cell.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<ng-container *ngIf=\"!isLink\">\r\n  {{ value }}\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"isLink\">\r\n  <a href=\"#\" class=\"cell-link\">{{ value }}</a>\r\n</ng-container>\r\n"
         }
     ],
     "modules": [],
@@ -725,7 +1576,7 @@
         "children": []
     },
     "coverage": {
-        "count": 9,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -755,6 +1606,105 @@
                 "name": "App",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages 1/components/components.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Components",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages 1/components/components.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ApplicationData",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages 1/components2/components2.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Components2",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/Atoms/button.component/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/Atoms/divider.component/divider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DividerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/Atoms/icon.component/icon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "IconComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/Atoms/tab.component/tab.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TabComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/Atoms/table-cell.component/table-cell.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TableCellComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/molecules/action-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ActionButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/molecules/action-menu.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ActionMenuComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/pages/components/molecules/tabs-group.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ActionButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
