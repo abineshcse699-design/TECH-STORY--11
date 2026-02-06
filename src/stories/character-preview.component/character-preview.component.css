@@ -1,0 +1,97 @@
+.preview-page {
+  background: #f5f4f2;
+  padding: 40px;
+}
+
+.preview-card {
+  background: #e9e7e1;
+  padding: 20px 24px 30px;
+  border-radius: 8px;
+}
+
+.preview-label {
+  color: #b0702d;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.preview-title {
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.character-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.character-table th {
+  background: #f3f3f3;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+}
+
+.character-table td {
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.section-head {
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  font-weight: 600;
+}
+
+.section-body {
+  border-bottom: 1px solid #ddd;
+}
+
+.group-title {
+  font-weight: 600;
+  color: #1d4c3c;
+  margin-bottom: 6px;
+}
+
+.notes {
+  text-align: center;
+  width: 60px;
+}
+
+.col-move {
+  width: 40px;
+  text-align: center;
+  color: #666;
+}
+
+.col-no {
+  width: 60px;
+}
+
+.col-type {
+  width: 30%;
+}
+
+.col-example {
+  width: 40%;
+}
+
+.col-notes {
+  width: 60px;
+}
+
+.col-delete {
+  width: 60px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+}
