@@ -1,0 +1,273 @@
+
+
+
+/* Page centering logic */
+.panel-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+      /* Full screen height use pannum */
+  padding: 20px;
+  background-color: #f5f5f5; /* Background for visibility */
+}
+
+/* Overall Panel Container */
+.custom-panel {
+  width: 1158px !important; /* Spec: Fill (1,158px) */
+  border: 1px solid #E0E0E0;
+  border-radius: 8px !important;
+  background: #FFFFFF !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Adjustments */
+.custom-header {
+  height: auto !important;
+  padding: 0 !important;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* IMAGE 1: Main Info Row Layout */
+.main-info-row {
+  display: flex;
+  flex-direction: row; /* Spec: Horizontal Flow */
+  align-items: center;
+  justify-content: flex-start; /* Start-la irunthu elements align aagum */
+  height: 87px !important;     /* Spec: Hug (87px) */
+  padding: 16px !important;    /* Spec: 16px Padding */
+  gap: 24px !important;        /* Spec: 24px Gap */
+  border-top-left-radius: 8px; /* Spec: 8px Radius */
+  border-top-right-radius: 8px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18%;
+}
+
+/* IMAGE 2: Bottom Row Layout */
+.bottom-row {
+  display: flex;
+  flex-direction: row;        /* Spec: Horizontal Flow */
+  justify-content: space-between; /* Spec: space-between */
+  align-items: center;
+  height: 65px !important;    /* Spec: Hug (65px) */
+  padding: 16px !important;   /* Spec: 16px Padding */
+  border-top: 1px solid #E0E0E0; /* Spec: 1px Top Border */
+  border-bottom-left-radius: 8px; /* Spec: 8px Radius */
+  border-bottom-right-radius: 8px;
+}
+
+/* Submit Button & Container Fix */
+.button-container {
+  margin-left: auto; /* Pushes the button to the extreme right of the row */
+  display: flex;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: #163A30 !important; /* Dark Green from image */
+  color: #FFFFFF !important;
+  border-radius: 20px !important;
+  padding: 0 16px !important;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn mat-icon {
+  color: #E0F048 !important; /* Goldish checkmark */
+  font-size: 20px;
+}
+
+
+
+
+
+
+/* Details Link */
+.more-details-link {
+  color: #163A30;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-color: #D4E157;
+    text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+/* Expanded Area Styling */
+.expanded-content {
+  /* padding: 24px; */
+  background: white;
+}
+
+.links-section {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.external-link {
+  color: #163A30;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #D4E157;
+    text-decoration-thickness: 1.5px;   /* Increase thickness */
+  text-underline-offset: 3px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.external-link mat-icon { font-size: 16px; width: 16px; height: 16px; }
+
+/* Editor Box */
+.rich-text-editor {
+  border: 1px solid #163A30;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+/*
+.editor-toolbar {
+  background: #F9F9F9;
+  padding: 8px 12px;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  gap: 15px;
+  color: #555;
+} */
+
+/* .editor-toolbar mat-icon { font-size: 20px; cursor: pointer; } */
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  resize: vertical;
+}
+
+/* Typography */
+.label-text { font-size: 14px; color: #757575; font-weight: 400; }
+.label-text1 { font-size: 12px; color: #757575; font-weight: 400; }
+.value-text { font-size: 18px; font-weight: 700; color: #163A30; }
+.meta-section { text-align: right; color: #9E9E9E; font-size: 11px; }
+
+
+
+
+
+/* Special styling for when the row is at the bottom of the expanded area */
+.expanded-footer {
+  margin-top: 24px;
+  margin-left: -24px; /* Pull back against expanded-content padding */
+  margin-right: -24px;
+  margin-bottom: -24px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.expanded-content {
+  /* padding: 24px; */
+  padding-bottom: 24px; /* Space before footer */
+}
+
+/* Text & Button Styling */
+.submit-btn {
+  background-color: #163A30 !important;
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+.submit-btn mat-icon { color: #E0F048 !important; }
+
+.more-details-link {
+  color: #163A30;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #E0F048;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+    text-decoration-thickness: 1.5px;
+  gap: 4px;
+}
+
+.botanical-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #163A30;
+  margin: 12px 0;
+  line-height: 1.6;
+  width: 1140px;
+
+}
+
+/* Rich Text Editor Styling */
+.rich-text-editor {
+  border: 1px solid #163A30;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+/*
+.editor-toolbar {
+  background: #F8F9FA;
+  padding: 8px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #E0E0E0;
+} */
+.tg-code{
+  font-size: 14px;
+}
+
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.toolbar-icon svg {
+  width: 22px;
+  height: 24px;
+  cursor: pointer;
+  /* color: #1C4240; */
+}
+
+.small-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.toolbar-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}

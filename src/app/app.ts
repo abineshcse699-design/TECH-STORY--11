@@ -1,14 +1,26 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "../pages/header/header";
-import { Components } from "./pages 1/components/components";
-import { Components2 } from "./pages 1/components2/components2";
-import { TablesComponent } from "./pages 1/tables.component/tables.component";
+
+
+
+import { ActionButtonsComponent } from "../pages/components/molecules/action-buttons.component";
+
+
+import { AuthCard } from "./cards/auth-card/auth-card";
+
+import { CountryComponent } from "./cards/country.component/country.component";
+import { Panel } from "./cards/panel/panel";
+import { Card2 } from "./cards/card2/card2";
+import { Tab } from "./pages 1/tab/tab";
+
+
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Components, Components2, TablesComponent],
+  imports: [RouterOutlet, Header, ActionButtonsComponent, AuthCard, CountryComponent, Panel, Card2, Tab],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

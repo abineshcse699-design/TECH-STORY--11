@@ -1,0 +1,104 @@
+/* Container Spacing */
+.compact-view {
+  background-color: #f5f7f7;
+  padding: 0 10px;
+  width: 90%;
+}
+
+/* 1. Reduce Tab Height and Gaps */
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Aligns buttons with tab baseline */
+  border-bottom: 1px solid #d0d0d0;
+}
+
+::ng-deep .narrow-tabs .mat-mdc-tab {
+  height: 40px !important; /* Shorter tabs */
+  min-width: 100px !important;
+  padding: 0 12px !important;
+}
+
+::ng-deep .narrow-tabs .mdc-tab__text-label {
+  font-size: 13px;
+  color: #4a5a5a;
+}
+
+/* 2. Toolbar Actions Alignment */
+.toolbar-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.text-link {
+  font-size: 13px !important;
+  color: #2d5a27 !important;
+  font-weight: 600 !important;
+  text-decoration: underline;
+}
+
+/* 3. The CRT Table: Ultra Compact */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+
+.crt-table {
+  width: 80%;
+
+}
+
+/* Force Row Height Down */
+::ng-deep .crt-table .mat-mdc-header-row {
+  height: 36px !important;
+}
+
+::ng-deep .crt-table .mat-mdc-row {
+  height: 32px !important; /* Very tight spacing */
+}
+
+/* Cell Padding Reduction */
+.mat-mdc-header-cell, .mat-mdc-cell {
+  padding: 4px 10px !important; /* Tight lateral gaps */
+  font-size: 12.5px !important;
+  border-right: 1px solid #f0f0f0; /* Sublte vertical separator */
+}
+
+/* 4. ID Link with Green Underline */
+.id-cell {
+  color: #2d5a27;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #98b594;
+}
+
+.botanical { font-style: italic; }
+
+/* 5. Sticky Action Column with BOX SHADOW */
+.sticky-action {
+  background-color: white !important;
+  text-align: center;
+  width: 50px;
+  border-left: 1px solid #ddd !important;
+  /* Shadow mimic from image_4c8d02.png */
+  box-shadow: -6px 0 10px -8px rgba(0,0,0,0.3) !important;
+}
+
+.small-icon {
+  width: 30px !important;
+  height: 30px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d5a27;
+}
+
+.sort-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  color: #999;
+}

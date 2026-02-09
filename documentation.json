@@ -2,309 +2,6 @@
     "pipes": [],
     "interfaces": [
         {
-            "name": "ApplicationData",
-            "id": "interface-ApplicationData-77299d3b6048e335d2918d51d92dade6f78be76531b7532b53390ecf8718afb9f7328c3d23a50f9b6cbf91f9a92b71e2a729c62358fd4e6de3ac8e0167845e02",
-            "file": "src/app/pages 1/components/components.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\nimport { MatTableModule } from '@angular/material/table';\r\n\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSortModule } from '@angular/material/sort';\r\n\r\nexport interface ApplicationData {\r\n  reference: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'app-components',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTabsModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    MatDividerModule,\r\n    MatTableModule,\r\n    MatMenuModule,\r\n    MatSortModule,\r\n  ],\r\n  templateUrl: './components.html',\r\n  styleUrls: ['./components.css']\r\n})\r\nexport class Components {\r\n\r\n\r\n  displayedColumns: string[] = [\r\n    'reference',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource: ApplicationData[] = [\r\n    {\r\n      reference: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    }\r\n  ];\r\n\r\n}\r\n\r\n",
-            "properties": [
-                {
-                    "name": "application",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 14
-                },
-                {
-                    "name": "breeder",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 18
-                },
-                {
-                    "name": "crop",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 16
-                },
-                {
-                    "name": "denomination",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 17
-                },
-                {
-                    "name": "modified",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 15
-                },
-                {
-                    "name": "reference",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 13
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 172,
-            "methods": [],
-            "extends": []
-        },
-        {
-            "name": "CharacterSection",
-            "id": "interface-CharacterSection-d9826feda5f38b620200ceb3eccaa34dd532d51b994aba8f553b60bb54c7dbac5a52e22f0fc8e5796d765862f0806d034483779480c48c00d1a345abf36eb9d8",
-            "file": "src/stories/character-preview.component/character-preview.component.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nexport interface CharacterSection {\r\n  id: number;\r\n  title: string;\r\n  type: string;\r\n  levels: string[];\r\n  examples: string[];\r\n  notes: string[];\r\n}\r\n\r\n@Component({\r\n  selector: 'app-character-preview',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './character-preview.component.html',\r\n  styleUrls: ['./character-preview.component.css']\r\n})\r\nexport class CharacterPreviewComponent {\r\n\r\n  @Input() title = 'List of Characteristics';\r\n  @Input() sections: CharacterSection[] = [];\r\n\r\n}\r\n",
-            "properties": [
-                {
-                    "name": "examples",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                },
-                {
-                    "name": "id",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 5
-                },
-                {
-                    "name": "levels",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 8
-                },
-                {
-                    "name": "notes",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                },
-                {
-                    "name": "title",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 6
-                },
-                {
-                    "name": "type",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 7
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 172,
-            "methods": [],
-            "extends": []
-        },
-        {
-            "name": "TableRow",
-            "id": "interface-TableRow-bc338a1ba662897e95b6763710e6bcb102772c8de33df20fb71d697c1727012e17c38d3ed98497518ec4f6a6d65310299ebac60373595cc7c34afe09737caa21",
-            "file": "src/stories/tables.component/tables.component.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\n\r\nexport interface TableRow {\r\n  ref: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-tables',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTableModule,\r\n    MatIconModule,\r\n    MatMenuModule,\r\n    MatProgressBarModule\r\n  ],\r\n  templateUrl: './tables.component.html',\r\n  styleUrls: ['./tables.component.css']\r\n})\r\nexport class TablesComponent {\r\n\r\n  @Input() activeTab: 'progress' | 'submitted' = 'progress';\r\n  @Input() showFilters = true;\r\n  @Input() dataSource: TableRow[] = [];\r\n\r\n  displayedColumns: string[] = [\r\n    'ref',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n}\r\n",
-            "properties": [
-                {
-                    "name": "application",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                },
-                {
-                    "name": "breeder",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 14
-                },
-                {
-                    "name": "crop",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 12
-                },
-                {
-                    "name": "denomination",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 13
-                },
-                {
-                    "name": "modified",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 11
-                },
-                {
-                    "name": "ref",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 172,
-            "methods": [],
-            "extends": []
-        },
-        {
-            "name": "TableRow",
-            "id": "interface-TableRow-177dcf7a245a2cbc600e9d5d5fde3eb2ab11740574390c229c9a27ac89d9fd28387205415ecdc68c8a6258eae76f516a371a3876a39b16731a68d2ebd7c7f999-1",
-            "file": "src/app/pages 1/tables.component/tables.component.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\n\r\nexport interface TableRow {\r\n  ref: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-tables',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTableModule,\r\n    MatIconModule,\r\n    MatMenuModule,\r\n    MatProgressBarModule\r\n  ],\r\n  templateUrl: './tables.component.html',\r\n  styleUrls: ['./tables.component.css']\r\n})\r\nexport class TablesComponent {\r\n\r\n  activeTab: 'progress' | 'submitted' = 'progress';\r\n  showFilters = true;\r\n\r\n  displayedColumns: string[] = [\r\n    'ref',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource: TableRow[] = [\r\n    {\r\n      ref: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    },\r\n    {\r\n      ref: 'XU_30202500000145',\r\n      application: 'PBR',\r\n      modified: '21/04/2024',\r\n      crop: 'Cucumis melo L.',\r\n      denomination: 'MELON VARIETY',\r\n      breeder: 'ggs'\r\n    }\r\n  ];\r\n\r\n\r\n\r\n}\r\n",
-            "properties": [
-                {
-                    "name": "application",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                },
-                {
-                    "name": "breeder",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 14
-                },
-                {
-                    "name": "crop",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 12
-                },
-                {
-                    "name": "denomination",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 13
-                },
-                {
-                    "name": "modified",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 11
-                },
-                {
-                    "name": "ref",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 172,
-            "methods": [],
-            "extends": [],
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "TableRow-1"
-        },
-        {
             "name": "User",
             "id": "interface-User-d4821beac0e4a852e513391b7470981c4353fdd95a18628bb68136c8695b489ee15b926e2e5031bc26cf30e1508e0a362c3ee13a06734702b4d15af140e485d5",
             "file": "src/stories/user.ts",
@@ -618,8 +315,131 @@
             "extends": []
         },
         {
+            "name": "Api",
+            "id": "component-Api-0a4ed3a67ddfdcd3196e00bc4fcf3dc492e178946cdcc66d3e1e5b133eb3aeac0fd820932dee22d9012e06ffb3047c58d15e22549e1d32563295fbdee87c2078",
+            "file": "src/app/pages 1/api/api.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-api",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./api.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "characteristics",
+                    "defaultValue": "[\r\n    {\r\n      index: '1',\r\n      tags: ['QN', 'MG/VG'],\r\n      title: 'Tree: vigor',\r\n      rows: [\r\n        { english: 'very weak', varieties: \"Grenadier, Nield\\'s Drooper\", notes: 1 },\r\n        { english: 'very weak to weak', varieties: 'James Grieve, Redkan', notes: 2 },\r\n        { english: 'weak', varieties: 'Alkmene, Regine', notes: 3 },\r\n        { english: 'weak to medium', varieties: 'Piros, Pomfroyou, Renora', notes: 4 },\r\n        { english: 'medium', varieties: 'Gala, Pinova, Trajan', notes: 5 },\r\n        { english: 'medium to strong', varieties: 'Dalili, Pia, Pivita', notes: 6 },\r\n        { english: 'strong', varieties: 'Elstar, Rafzubin, Santana', notes: 7 },\r\n        { english: 'strong to very strong', varieties: 'Bay 3484, Collina, Cripps Pink', notes: 8 },\r\n        { english: 'very strong', varieties: 'Gloster, Ingrid Marie', notes: 9 }\r\n      ]\r\n    },\r\n    {\r\n      index: '2 (*)',\r\n      tags: ['QL', 'VG'],\r\n      title: 'Tree: type',\r\n      rows: [\r\n        { english: 'columnar', varieties: 'MacExcel, Wijcik', notes: 1 },\r\n        { english: 'ramified', varieties: 'Elstar, Golden Delicious', notes: 2 }\r\n      ]\r\n    },\r\n    {\r\n      index: '3 (*)',\r\n      tags: ['QN', 'MG/VG'],\r\n      title: 'Leaf: length',\r\n      rows: [\r\n        { english: 'very short', varieties: 'Kasumi', notes: 1 },\r\n        { english: 'medium', varieties: '', notes: 2 },\r\n        { english: 'long', varieties: 'variety B', notes: 3 }\r\n      ]\r\n    },\r\n    {\r\n      index: '4',\r\n      tags: ['QL', 'MS'],\r\n      title: 'resistance test',\r\n      rows: [\r\n        { english: 'absent', varieties: '', notes: 1 },\r\n        { english: 'present', varieties: '', notes: 9 }\r\n      ]\r\n    }\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "displayedColumns",
+                    "defaultValue": "['english', 'varieties', 'notes']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "deleteItem",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 76,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTableModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatChipsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatDividerModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatChipsModule } from '@angular/material/chips';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\n\r\n@Component({\r\n  selector: 'app-api',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatCardModule,\r\n    MatTableModule,\r\n    MatIconModule,\r\n    MatButtonModule,\r\n    MatChipsModule,\r\n    MatDividerModule\r\n  ],\r\n  templateUrl: './api.html',\r\n  styleUrl: './api.css'\r\n})\r\nexport class Api {\r\n\r\n  displayedColumns: string[] = ['english', 'varieties', 'notes'];\r\n\r\n  characteristics = [\r\n    {\r\n      index: '1',\r\n      tags: ['QN', 'MG/VG'],\r\n      title: 'Tree: vigor',\r\n      rows: [\r\n        { english: 'very weak', varieties: \"Grenadier, Nield\\'s Drooper\", notes: 1 },\r\n        { english: 'very weak to weak', varieties: 'James Grieve, Redkan', notes: 2 },\r\n        { english: 'weak', varieties: 'Alkmene, Regine', notes: 3 },\r\n        { english: 'weak to medium', varieties: 'Piros, Pomfroyou, Renora', notes: 4 },\r\n        { english: 'medium', varieties: 'Gala, Pinova, Trajan', notes: 5 },\r\n        { english: 'medium to strong', varieties: 'Dalili, Pia, Pivita', notes: 6 },\r\n        { english: 'strong', varieties: 'Elstar, Rafzubin, Santana', notes: 7 },\r\n        { english: 'strong to very strong', varieties: 'Bay 3484, Collina, Cripps Pink', notes: 8 },\r\n        { english: 'very strong', varieties: 'Gloster, Ingrid Marie', notes: 9 }\r\n      ]\r\n    },\r\n    {\r\n      index: '2 (*)',\r\n      tags: ['QL', 'VG'],\r\n      title: 'Tree: type',\r\n      rows: [\r\n        { english: 'columnar', varieties: 'MacExcel, Wijcik', notes: 1 },\r\n        { english: 'ramified', varieties: 'Elstar, Golden Delicious', notes: 2 }\r\n      ]\r\n    },\r\n    {\r\n      index: '3 (*)',\r\n      tags: ['QN', 'MG/VG'],\r\n      title: 'Leaf: length',\r\n      rows: [\r\n        { english: 'very short', varieties: 'Kasumi', notes: 1 },\r\n        { english: 'medium', varieties: '', notes: 2 },\r\n        { english: 'long', varieties: 'variety B', notes: 3 }\r\n      ]\r\n    },\r\n    {\r\n      index: '4',\r\n      tags: ['QL', 'MS'],\r\n      title: 'resistance test',\r\n      rows: [\r\n        { english: 'absent', varieties: '', notes: 1 },\r\n        { english: 'present', varieties: '', notes: 9 }\r\n      ]\r\n    }\r\n  ];\r\n\r\n  deleteItem(index: number) {\r\n    this.characteristics.splice(index, 1);\r\n  }\r\n}\r\n",
+            "styleUrl": "./api.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"preview-wrapper\">\r\n\r\n  <div class=\"preview-label\">\r\n    <mat-icon color=\"primary\">visibility</mat-icon>\r\n    <span>PREVIEW</span>\r\n  </div>\r\n\r\n  <mat-card>\r\n\r\n    <mat-card-title>\r\n      List of Characteristics ({{ characteristics.length }})\r\n    </mat-card-title>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <ng-container *ngFor=\"let item of characteristics; let i = index\">\r\n\r\n      <div class=\"characteristic-block\">\r\n\r\n        <!-- HEADER ROW -->\r\n        <div class=\"top-row\">\r\n\r\n          <div class=\"left-side\">\r\n            <mat-icon class=\"drag-icon\">unfold_more</mat-icon>\r\n\r\n            <span class=\"index\">{{ item.index }}</span>\r\n\r\n            <mat-chip-set>\r\n              <mat-chip *ngFor=\"let tag of item.tags\">\r\n                {{ tag }}\r\n              </mat-chip>\r\n            </mat-chip-set>\r\n          </div>\r\n\r\n          <button mat-icon-button color=\"warn\" (click)=\"deleteItem(i)\">\r\n            <mat-icon>delete</mat-icon>\r\n          </button>\r\n\r\n        </div>\r\n\r\n        <!-- TITLE -->\r\n        <div class=\"section-title\">\r\n          {{ item.title }}\r\n        </div>\r\n\r\n        <!-- TABLE -->\r\n        <table mat-table [dataSource]=\"item.rows\" class=\"mat-elevation-z0 full-width\">\r\n\r\n          <ng-container matColumnDef=\"english\">\r\n            <th mat-header-cell *matHeaderCellDef>English</th>\r\n            <td mat-cell *matCellDef=\"let row\">{{ row.english }}</td>\r\n          </ng-container>\r\n\r\n          <ng-container matColumnDef=\"varieties\">\r\n            <th mat-header-cell *matHeaderCellDef>Example Varieties</th>\r\n            <td mat-cell *matCellDef=\"let row\">{{ row.varieties }}</td>\r\n          </ng-container>\r\n\r\n          <ng-container matColumnDef=\"notes\">\r\n            <th mat-header-cell *matHeaderCellDef>Notes</th>\r\n            <td mat-cell *matCellDef=\"let row\">{{ row.notes }}</td>\r\n          </ng-container>\r\n\r\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n\r\n        </table>\r\n\r\n        <mat-divider></mat-divider>\r\n\r\n      </div>\r\n\r\n    </ng-container>\r\n\r\n  </mat-card>\r\n\r\n</div>\r\n"
+        },
+        {
             "name": "App",
-            "id": "component-App-381b5dc41f2c8409150a75c9cd313661091c4717713b0d229d6342461fdef3835d20e17e504aaf4dde341d8cd1c6ffe357b9ff58dd79f6f28b71938ba6d639f4",
+            "id": "component-App-d935427337a7e47ca729dd5918b9f51782db632c0cd5b3b9fbefd3763b3d0a299c8b9efc9a9f1288881215f54ad9c2918b9173481303cf3f952965827ee9c450",
             "file": "src/app/app.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -646,7 +466,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 16,
+                    "line": 28,
                     "modifierKind": [
                         124,
                         148
@@ -667,28 +487,311 @@
                     "name": "Header"
                 },
                 {
-                    "name": "Components",
+                    "name": "TablesComponent1",
                     "type": "component"
                 },
                 {
-                    "name": "Components2",
+                    "name": "ActionButtonsComponent",
                     "type": "component"
                 },
                 {
-                    "name": "TablesComponent",
+                    "name": "Api"
+                },
+                {
+                    "name": "AuthCard"
+                },
+                {
+                    "name": "CountryComponent",
                     "type": "component"
+                },
+                {
+                    "name": "Panel"
+                },
+                {
+                    "name": "Card2"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { Header } from \"../pages/header/header\";\r\nimport { Components } from \"./pages 1/components/components\";\r\nimport { Components2 } from \"./pages 1/components2/components2\";\r\nimport { TablesComponent } from \"./pages 1/tables.component/tables.component\";\r\n\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [RouterOutlet, Header, Components, Components2, TablesComponent],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n  protected readonly title = signal('techstory');\r\n}\r\n",
+            "sourceCode": "import { Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { Header } from \"../pages/header/header\";\r\n\r\n\r\n\r\nimport { TablesComponent1 } from \"./pages 1/tables.component1/tables.component1\";\r\nimport { ActionButtonsComponent } from \"../pages/components/molecules/action-buttons.component\";\r\n\r\nimport { Api } from \"./pages 1/api/api\";\r\nimport { AuthCard } from \"./cards/auth-card/auth-card\";\r\n\r\nimport { CountryComponent } from \"./cards/country.component/country.component\";\r\nimport { Panel } from \"./cards/panel/panel\";\r\nimport { Card2 } from \"./cards/card2/card2\";\r\n\r\n\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [RouterOutlet, Header, TablesComponent1, ActionButtonsComponent, Api, AuthCard, CountryComponent, Panel, Card2],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n  protected readonly title = signal('techstory');\r\n}\r\n",
             "styleUrl": "./app.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "\r\n<app-tables></app-tables>\r\n\r\n"
+            "templateData": "\r\n\r\n<app-auth-card></app-auth-card>\r\n\r\n\r\n\r\n<upov-panel></upov-panel>\r\n<upov-country></upov-country>\r\n<app-card2></app-card2>\r\n"
+        },
+        {
+            "name": "App1",
+            "id": "component-App1-ef0f37a8f0a42d9c6516752a1327d950e0accd8a8ebd0f5c1ab50899e480b125309fc66987bcf6788e2f7a50cbbf770d01b039feaa82985db23678dc7bcccf38",
+            "file": "src/app/pages 1/app1/app1.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-app1",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app1.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-app1',\r\n  imports: [],\r\n  templateUrl: './app1.html',\r\n  styleUrl: './app1.css',\r\n})\r\nexport class App1 {\r\n\r\n}\r\n",
+            "styleUrl": "./app1.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>app1 works!</p>\r\n"
+        },
+        {
+            "name": "AuthCard",
+            "id": "component-AuthCard-b8c8e975af64fa7cefa0071c04ecebfa07ef0504bae58fc3b9d8c12e05e27bb1b1ec715719100ea0742f9e9e37a69ae0681ccc67f0333d3ca28cf3d39a00f14d",
+            "file": "src/stories/auth-card.component/auth-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "upov-auth-card",
+            "styleUrls": [
+                "./auth-card.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./auth-card.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "botanicalName",
+                    "defaultValue": "'Ananas Mill.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "category",
+                    "defaultValue": "'ANANA'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "family",
+                    "defaultValue": "'Bromeliaceae'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "imageUrl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string | null",
+                    "decorators": []
+                },
+                {
+                    "name": "primaryName",
+                    "defaultValue": "'Pineapple'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "updated",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatChipsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatChipsModule } from '@angular/material/chips';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'upov-auth-card',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatCardModule,\r\n    MatChipsModule,\r\n    MatIconModule\r\n  ],\r\n  templateUrl: './auth-card.component.html',\r\n  styleUrls: ['./auth-card.component.css']\r\n})\r\nexport class AuthCard {\r\n\r\n  @Input() category: string = 'ANANA';\r\n  @Input() botanicalName: string = 'Ananas Mill.';\r\n  @Input() primaryName: string = 'Pineapple';\r\n  @Input() family: string = 'Bromeliaceae';\r\n  @Input() imageUrl?: string | null;\r\n  @Input() updated: boolean = true;\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".plant-card {\r\n  width: 348px;\r\n  height: 146px;\r\n  border-radius: 16px;\r\n  position: relative;\r\n  padding: 16px;\r\n  background: #ffffff;\r\n  box-shadow: 0 2px 8px rgba(70, 70, 70, 0.05);\r\n}\r\n\r\n/* Updated Chip */\r\n.updated-chip {\r\n  position: absolute;\r\n  top: 12px;\r\n  right: 12px;\r\n  background-color: #2D7D5F !important;\r\n  color: #ffffff !important;\r\n  font-size: 11px;\r\n  font-weight: 500;\r\n  height: 22px;\r\n  border-radius: 6px !important;\r\n  z-index: 10;\r\n}\r\n\r\n.updated-chip ::ng-deep .mdc-evolution-chip__text-label {\r\n  color: #ffffff !important;\r\n}\r\n\r\n/* Layout */\r\n.card-content {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 100%;\r\n}\r\n\r\n/* LEFT SIDE */\r\n.left {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 6px;\r\n}\r\n\r\n/* Category */\r\n.category {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 6px;\r\n  font-size: 14px;\r\n  font-weight: 500;\r\n  color: #1c4240;\r\n}\r\n\r\n.leaf-icon {\r\n  font-size: 18px;\r\n  color: #1c4240;\r\n}\r\n\r\n/* Botanical Name */\r\n.botanical-name {\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  color: #1c4240;\r\n  margin: 0;\r\n  text-decoration: underline;\r\n  text-decoration-color: #e6e94f;\r\n  text-underline-offset: 4px;\r\n}\r\n\r\n/* Details */\r\n.details {\r\n  margin-top: 10px;\r\n}\r\n\r\n.primary {\r\n  font-size: 16px;\r\n  font-weight: 500;\r\n  color: #000000;\r\n}\r\n\r\n.secondary {\r\n  font-size: 14px;\r\n  color: #666666;\r\n}\r\n\r\n/* RIGHT IMAGE */\r\n.right {\r\n  width: 110px;\r\n  height: 110px;\r\n  border-radius: 12px;\r\n  overflow: hidden;\r\n  background: #f1f1f1;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.right img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n}\r\n\r\n/* No Image */\r\n.no-image {\r\n  text-align: center;\r\n  font-size: 14px;\r\n  color: #666;\r\n  line-height: 18px;\r\n}\r\n",
+                    "styleUrl": "./auth-card.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>auth-card.component works!</p>\r\n<mat-card class=\"plant-card\">\r\n\r\n  <!-- Updated Chip -->\r\n  <mat-chip\r\n    *ngIf=\"updated\"\r\n    class=\"updated-chip\"\r\n    selected>\r\n    Updated\r\n  </mat-chip>\r\n\r\n  <div class=\"card-content\">\r\n\r\n    <!-- LEFT SIDE -->\r\n    <div class=\"left\">\r\n\r\n      <div class=\"category\">\r\n        <mat-icon class=\"leaf-icon\">eco</mat-icon>\r\n        <span>{{ category }}</span>\r\n      </div>\r\n\r\n      <h3 class=\"botanical-name\">\r\n        {{ botanicalName }}\r\n      </h3>\r\n\r\n      <div class=\"details\">\r\n        <div class=\"primary\">{{ primaryName }}</div>\r\n        <div class=\"secondary\">{{ family }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <!-- RIGHT SIDE -->\r\n    <div class=\"right\">\r\n\r\n      <ng-container *ngIf=\"imageUrl; else noImage\">\r\n        <img [src]=\"imageUrl\" alt=\"Plant image\" />\r\n      </ng-container>\r\n\r\n      <ng-template #noImage>\r\n        <div class=\"no-image\">\r\n          No image<br />\r\n          available\r\n        </div>\r\n      </ng-template>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</mat-card>\r\n"
+        },
+        {
+            "name": "AuthCard",
+            "id": "component-AuthCard-76b093f87f2591316d87d83139e3989b5d778c083740e166b71e219616f80513c7cec75da50a9bc17131e819e045890da45a913fad2111061611cc270026e07d-1",
+            "file": "src/app/cards/auth-card/auth-card.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-auth-card",
+            "styleUrls": [
+                "./auth-card.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./auth-card.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "botanicalName",
+                    "defaultValue": "'Ananas Mill.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "category",
+                    "defaultValue": "'ANANA'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "family",
+                    "defaultValue": "'Bromeliaceae'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "imageUrl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primaryName",
+                    "defaultValue": "'Pineapple'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "updated",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatChipsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatChipsModule } from '@angular/material/chips';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'app-auth-card',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatCardModule,\r\n    MatChipsModule,\r\n    MatIconModule\r\n  ],\r\n  \r\n  templateUrl: './auth-card.html',\r\n  styleUrls: ['./auth-card.css']\r\n})\r\n\r\nexport class AuthCard {\r\n\r\n  @Input() category = 'ANANA';\r\n  @Input() botanicalName = 'Ananas Mill.';\r\n  @Input() primaryName = 'Pineapple';\r\n  @Input() family = 'Bromeliaceae';\r\n  @Input() imageUrl?: string;\r\n  @Input() updated = true;\r\n\r\n\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".plant-card {\r\n  width: 348px;\r\n  height: 146px;\r\n  border-radius: 16px;\r\n  position: relative;\r\n  padding: 16px;\r\n  box-shadow: 0 2px 8px rgba(70, 70, 70, 0.04);\r\n}\r\n\r\n/* Updated Chip */\r\n.updated-chip {\r\n    display: flex;\r\n  position: absolute;\r\n  top: 10px;\r\n  right: 10px;\r\n  background-color: #2D7D5F !important; /* Dark teal-green */\r\n  color: #ffffff !important;\r\n  font-size: 11px;\r\n  font-weight: 500;\r\n  height: 22px;\r\n  /* padding: 0 10px; */\r\n  border-radius: 6px !important;\r\n  z-index: 10;\r\n\r\n}\r\n\r\n/* Layout */\r\n.card-content {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 16px;\r\n  height: 100%;\r\n}\r\n\r\n/* Left */\r\n.left {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 6px;\r\n}\r\n\r\n/* Category */\r\n.category {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 6px;\r\n  font-size: 14px;\r\n  font-weight: 500;\r\n  color: #1c4240;\r\n}\r\n\r\n.leaf-icon {\r\n  font-size: 18px;\r\n}\r\n\r\n/* Botanical Name */\r\n.botanical-name {\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  text-decoration: underline;\r\n  color: #1c4240;\r\n  margin: 0;\r\n}\r\n\r\n/* Details */\r\n.details {\r\n  margin-top: 12px;\r\n}\r\n\r\n.primary {\r\n  font-size: 16px;\r\n  font-weight: 500;\r\n}\r\n\r\n.secondary {\r\n  font-size: 14px;\r\n  color: #666;\r\n}\r\n\r\n/* Right Image */\r\n.right {\r\n  width: 110px;\r\n  height: 110px;\r\n  border-radius: 12px;\r\n  overflow: hidden;\r\n  background: #f1f1f1;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.right img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n}\r\n\r\n/* No Image State */\r\n.no-image {\r\n  text-align: center;\r\n  font-size: 14px;\r\n  color: #666;\r\n}\r\n\r\n.updated-chip ::ng-deep .mdc-evolution-chip__text-label {\r\n  color: #FFFFFF !important;\r\n}\r\n\r\n\r\n\r\n",
+                    "styleUrl": "./auth-card.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "AuthCard-1",
+            "templateData": "<mat-card class=\"plant-card mat-elevation-z2\">\r\n\r\n  <!-- Updated Chip -->\r\n  <mat-chip *ngIf=\"updated\" class=\"updated-chip\" selected>\r\n    Updated\r\n  </mat-chip>\r\n\r\n  <div class=\"card-content\">\r\n\r\n    <!-- LEFT SIDE -->\r\n    <div class=\"left\">\r\n\r\n      <div class=\"category\">\r\n        <mat-icon class=\"leaf-icon\">eco</mat-icon>\r\n        <span>{{ category }}</span>\r\n      </div>\r\n\r\n      <h3 class=\"botanical-name\">\r\n        {{ botanicalName }}\r\n      </h3>\r\n\r\n      <div class=\"details\">\r\n        <div class=\"primary\">{{ primaryName }}</div>\r\n        <div class=\"secondary\">{{ family }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <!-- RIGHT SIDE -->\r\n    <div class=\"right\">\r\n\r\n      <ng-container *ngIf=\"imageUrl; else noImage\">\r\n        <img [src]=\"imageUrl\" alt=\"Plant\" />\r\n      </ng-container>\r\n\r\n      <ng-template #noImage>\r\n        <div class=\"no-image\">\r\n          No image<br />\r\n          available\r\n        </div>\r\n      </ng-template>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</mat-card>\r\n<mat-card class=\"plant-card mat-elevation-z2\">\r\n\r\n  <!-- Updated Chip -->\r\n  <mat-chip *ngIf=\"updated\" class=\"updated-chip\" selected style=\"color: aliceblue;\">\r\n    Updated\r\n  </mat-chip>\r\n\r\n  <div class=\"card-content\">\r\n\r\n    <!-- LEFT SIDE -->\r\n    <div class=\"left\">\r\n\r\n      <div class=\"category\">\r\n        <mat-icon class=\"leaf-icon\">eco</mat-icon>\r\n        <span>{{ category }}</span>\r\n      </div>\r\n\r\n      <h3 class=\"botanical-name\">\r\n        {{ botanicalName }}\r\n      </h3>\r\n\r\n      <div class=\"details\">\r\n        <div class=\"primary\">{{ primaryName }}</div>\r\n        <div class=\"secondary\">{{ family }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <!-- RIGHT SIDE -->\r\n    <div class=\"right\">\r\n\r\n      <ng-container *ngIf=\"imageUrl; else noImage\">\r\n        <img [src]=\"imageUrl\" alt=\"Plant\" />\r\n      </ng-container>\r\n\r\n      <ng-template #noImage>\r\n        <div class=\"no-image\">\r\n          No image<br />\r\n          available\r\n        </div>\r\n      </ng-template>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</mat-card>\r\n\r\n\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -903,40 +1006,229 @@
             "templateData": "<button\r\n  mat-button\r\n  class=\"app-button\"\r\n  [disabled]=\"disabled\">\r\n\r\n  <app-icon *ngIf=\"icon\" [name]=\"icon\"></app-icon>\r\n\r\n  <ng-content></ng-content>\r\n\r\n</button>\r\n"
         },
         {
-            "name": "CharacterPreviewComponent",
-            "id": "component-CharacterPreviewComponent-d9826feda5f38b620200ceb3eccaa34dd532d51b994aba8f553b60bb54c7dbac5a52e22f0fc8e5796d765862f0806d034483779480c48c00d1a345abf36eb9d8",
-            "file": "src/stories/character-preview.component/character-preview.component.ts",
+            "name": "Card2",
+            "id": "component-Card2-a11b1c4ca816543fb9f1aebd6401e1242295527cd6b1333b8924d9c75084460b9735fd9e902e8e7458a848795425758961c7bd7276a67a28bf91a2e43daaa137",
+            "file": "src/app/cards/card2/card2.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-character-preview",
+            "selector": "app-card2",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./card2.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "irnNumber",
+                    "defaultValue": "'XU_30202600000002 (NLI)'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "status",
+                    "defaultValue": "'Pending revision'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onCopy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onDelete",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onDownload",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onEdit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onPay",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onSign",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTooltipModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n// Material Imports\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatTooltipModule } from '@angular/material/tooltip';\r\n\r\n@Component({\r\n  selector: 'app-card2',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatCardModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    MatTooltipModule\r\n  ],\r\n  templateUrl: './card2.html',\r\n  styleUrl: './card2.css',\r\n})\r\nexport class Card2 {\r\n  // Data properties to make the card dynamic\r\n  irnNumber: string = 'XU_30202600000002 (NLI)';\r\n  status: string = 'Pending revision';\r\n\r\n  constructor() {}\r\n\r\n  // Action Methods\r\n  onEdit() {\r\n    console.log('Edit form clicked');\r\n  }\r\n\r\n  onPay() {\r\n    console.log('Payment initiated');\r\n  }\r\n\r\n  onSign() {\r\n    console.log('Sign application triggered');\r\n  }\r\n\r\n  onDelete() {\r\n    if (confirm('Are you sure you want to delete this application?')) {\r\n      console.log('Application deleted');\r\n    }\r\n  }\r\n\r\n  onCopy() {\r\n    navigator.clipboard.writeText(this.irnNumber);\r\n    console.log('IRN copied to clipboard');\r\n  }\r\n\r\n  onDownload() {\r\n    console.log('Downloading PDF...');\r\n  }\r\n}\r\n",
+            "styleUrl": "./card2.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 26
+            },
+            "extends": [],
+            "templateData": "<mat-card class=\"application-card\">\r\n  <div class=\"card-content\">\r\n\r\n    <div class=\"info-section\">\r\n      <div class=\"header-row\">\r\n        <div class=\"label-group\">\r\n          <span class=\"label-text\">International Reference Number (IRN)</span>\r\n          <h2 class=\"reference-number\">XU_30202600000002 (NLI)</h2>\r\n        </div>\r\n\r\n        <div class=\"label-group status-group\">\r\n          <span class=\"label-text\">In progress status</span>\r\n          <span class=\"status-badge\">Pending revision</span>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"secondary-actions\">\r\n        <button mat-button  class=\"text-btn\" style=\"color:#1c4240;\">\r\n          <mat-icon>delete_outline</mat-icon> Delete the application\r\n        </button>\r\n        <span class=\"divider\">|</span>\r\n        <button mat-button class=\"text-btn\" style=\"color: #1c4240;\">\r\n          <mat-icon>content_copy</mat-icon> Copy application\r\n        </button>\r\n        <span class=\"divider\">|</span>\r\n        <button mat-button class=\"text-btn\" style=\"color: #1c4240;\">\r\n          <mat-icon>file_download</mat-icon> Download PDF\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"action-section\">\r\n\r\n      <button mat-stroked-button class=\"outline-btn\">\r\n        <mat-icon>edit</mat-icon> Edit form\r\n      </button>\r\n      <button mat-stroked-button class=\"outline-btn\">\r\n        <mat-icon>payments</mat-icon> Pay\r\n      </button>\r\n      <button mat-flat-button class=\"dark-btn\">\r\n        <mat-icon>vertical_align_top</mat-icon> Sign application\r\n      </button>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</mat-card>\r\n"
+        },
+        {
+            "name": "CountryCard",
+            "id": "component-CountryCard-7b6e4df79a1bfe82cf36128693a00293735f5b05ff98858b096e2b598c2320653f978933a9e25674e5119ae5d528243bbdeaaf69520f4ca4ae82970c2cdebb7c",
+            "file": "src/stories/country-card.component/country-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "upov-country-card",
             "styleUrls": [
-                "./character-preview.component.css"
+                "./country-card.component.css"
             ],
             "styles": [],
             "templateUrl": [
-                "./character-preview.component.html"
+                "./country-card.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
                 {
-                    "name": "sections",
-                    "defaultValue": "[]",
+                    "name": "code",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
-                    "type": "CharacterSection[]",
+                    "line": 15,
+                    "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "title",
-                    "defaultValue": "'List of Characteristics'",
+                    "name": "email",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "flag",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "office",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "person",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "phone",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
                     "type": "string",
                     "decorators": []
                 }
@@ -951,41 +1243,42 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "CommonModule",
+                    "name": "MatCardModule",
                     "type": "module"
+                },
+                {
+                    "name": "NgIf"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nexport interface CharacterSection {\r\n  id: number;\r\n  title: string;\r\n  type: string;\r\n  levels: string[];\r\n  examples: string[];\r\n  notes: string[];\r\n}\r\n\r\n@Component({\r\n  selector: 'app-character-preview',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './character-preview.component.html',\r\n  styleUrls: ['./character-preview.component.css']\r\n})\r\nexport class CharacterPreviewComponent {\r\n\r\n  @Input() title = 'List of Characteristics';\r\n  @Input() sections: CharacterSection[] = [];\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { NgIf } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'upov-country-card',\r\n  standalone: true,\r\n  imports: [MatCardModule, NgIf],\r\n  templateUrl: './country-card.component.html',\r\n  styleUrls: ['./country-card.component.css']\r\n})\r\nexport class CountryCard {\r\n\r\n  @Input() name!: string;\r\n  @Input() code!: string;\r\n  @Input() flag?: string;\r\n  @Input() person?: string;\r\n  @Input() phone?: string;\r\n  @Input() email?: string;\r\n  @Input() office?: string;\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".preview-page {\r\n  background: #f5f4f2;\r\n  padding: 40px;\r\n}\r\n\r\n.preview-card {\r\n  background: #e9e7e1;\r\n  padding: 20px 24px 30px;\r\n  border-radius: 8px;\r\n}\r\n\r\n.preview-label {\r\n  color: #b0702d;\r\n  font-weight: 600;\r\n  font-size: 14px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.preview-title {\r\n  margin: 0 0 16px;\r\n  font-weight: 600;\r\n}\r\n\r\n.table-wrapper {\r\n  background: white;\r\n  border-radius: 6px;\r\n  overflow: hidden;\r\n}\r\n\r\n.character-table {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 14px;\r\n}\r\n\r\n.character-table th {\r\n  background: #f3f3f3;\r\n  padding: 12px;\r\n  text-align: left;\r\n  border-bottom: 1px solid #ddd;\r\n  font-weight: 600;\r\n}\r\n\r\n.character-table td {\r\n  padding: 10px 12px;\r\n  vertical-align: top;\r\n}\r\n\r\n.section-head {\r\n  background: #f8f8f8;\r\n  border-top: 1px solid #ddd;\r\n  font-weight: 600;\r\n}\r\n\r\n.section-body {\r\n  border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.group-title {\r\n  font-weight: 600;\r\n  color: #1d4c3c;\r\n  margin-bottom: 6px;\r\n}\r\n\r\n.notes {\r\n  text-align: center;\r\n  width: 60px;\r\n}\r\n\r\n.col-move {\r\n  width: 40px;\r\n  text-align: center;\r\n  color: #666;\r\n}\r\n\r\n.col-no {\r\n  width: 60px;\r\n}\r\n\r\n.col-type {\r\n  width: 30%;\r\n}\r\n\r\n.col-example {\r\n  width: 40%;\r\n}\r\n\r\n.col-notes {\r\n  width: 60px;\r\n}\r\n\r\n.col-delete {\r\n  width: 60px;\r\n  text-align: center;\r\n  color: #666;\r\n  cursor: pointer;\r\n}\r\n",
-                    "styleUrl": "./character-preview.component.css"
+                    "data": ".custom-card {\r\n  width: 567px;\r\n  height: 126px;\r\n  padding: 12px 16px !important;\r\n  border-radius: 8px !important;\r\n  background-color: #FFFFFF;\r\n  border: 1px solid #f0f0f0;\r\n  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;\r\n  box-sizing: border-box;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n\r\n.card-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: flex-start;\r\n}\r\n\r\n.country-name {\r\n  color: #163a30;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  text-decoration: underline;\r\n  text-decoration-color: #e0f048;\r\n  text-underline-offset: 4px;\r\n}\r\n\r\n.country-code {\r\n  color: #163a30;\r\n  font-size: 18px;\r\n  margin-left: 6px;\r\n}\r\n\r\n.flag-icon {\r\n  width: 32px;\r\n  height: 32px;\r\n  border-radius: 50%;\r\n  border: 1.5px solid #DDE7E3;\r\n  object-fit: cover;\r\n}\r\n\r\n.chip-row {\r\n  margin: 4px 0;\r\n}\r\n\r\n.custom-chip {\r\n  background-color: #5d7e6f;\r\n  color: #FFFFFF;\r\n  padding: 2px 12px;\r\n  border-radius: 100px;\r\n  font-size: 11px;\r\n  font-weight: 500;\r\n}\r\n\r\n.info-grid {\r\n  display: grid;\r\n  grid-template-columns: 1.2fr 1fr;\r\n  column-gap: 15px;\r\n  row-gap: 4px;\r\n}\r\n\r\n.info-item {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 8px;\r\n}\r\n\r\n.brand-icon-svg svg {\r\n  width: 16px;\r\n  height: 16px;\r\n  color: #547c6a;\r\n}\r\n\r\n.contact-text {\r\n  color: #444444;\r\n  font-size: 13px;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.email-link {\r\n  color: #163a30;\r\n  font-size: 13px;\r\n  font-weight: 500;\r\n  text-decoration: underline;\r\n  text-decoration-color: #e0f048;\r\n  text-underline-offset: 3px;\r\n  cursor: pointer;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n",
+                    "styleUrl": "./country-card.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"preview-page\">\r\n  <div class=\"preview-card\">\r\n\r\n    <div class=\"preview-label\">\r\n      <span class=\"preview-icon\">▣</span>\r\n      PREVIEW\r\n    </div>\r\n\r\n    <h3 class=\"preview-title\">\r\n      {{ title }} ({{ sections.length }})\r\n    </h3>\r\n\r\n    <div class=\"table-wrapper\">\r\n      <table class=\"character-table\">\r\n\r\n        <thead>\r\n          <tr>\r\n            <th class=\"col-move\"></th>\r\n            <th class=\"col-no\">No</th>\r\n            <th class=\"col-type\">English</th>\r\n            <th class=\"col-example\">Example Varieties</th>\r\n            <th class=\"col-notes\">Notes</th>\r\n            <th class=\"col-delete\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n\r\n        <tbody>\r\n\r\n          <ng-container *ngFor=\"let section of sections\">\r\n\r\n            <!-- Section Header -->\r\n            <tr class=\"section-head\">\r\n              <td class=\"col-move\">↕</td>\r\n              <td class=\"col-no\">{{ section.id }}</td>\r\n              <td>\r\n                <b>{{ section.type }}</b>\r\n              </td>\r\n              <td></td>\r\n              <td></td>\r\n              <td class=\"col-delete\">🗑</td>\r\n            </tr>\r\n\r\n            <!-- Section Body -->\r\n            <tr class=\"section-body\">\r\n              <td></td>\r\n              <td></td>\r\n\r\n              <td>\r\n                <div class=\"group-title\">{{ section.title }}</div>\r\n                <div *ngFor=\"let level of section.levels\">\r\n                  {{ level }}\r\n                </div>\r\n              </td>\r\n\r\n              <td>\r\n                <div>&nbsp;</div>\r\n                <div *ngFor=\"let example of section.examples\">\r\n                  {{ example }}\r\n                </div>\r\n              </td>\r\n\r\n              <td class=\"notes\">\r\n                <div>&nbsp;</div>\r\n                <div *ngFor=\"let note of section.notes\">\r\n                  {{ note }}\r\n                </div>\r\n              </td>\r\n\r\n              <td></td>\r\n            </tr>\r\n\r\n          </ng-container>\r\n\r\n        </tbody>\r\n\r\n      </table>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<mat-card class=\"custom-card\">\r\n\r\n  <!-- Header -->\r\n  <div class=\"card-header\">\r\n    <div class=\"title-container\">\r\n      <span class=\"country-name\">{{ name }}</span>\r\n      <span class=\"country-code\">({{ code }})</span>\r\n    </div>\r\n\r\n    <img\r\n      *ngIf=\"flag\"\r\n      [src]=\"flag\"\r\n      class=\"flag-icon\"\r\n      alt=\"flag\"\r\n    />\r\n  </div>\r\n\r\n  <!-- Chip -->\r\n  <div class=\"chip-row\">\r\n    <span class=\"custom-chip\">All genera and species</span>\r\n  </div>\r\n\r\n  <!-- Info Grid -->\r\n  <div class=\"info-grid\">\r\n\r\n    <!-- Person -->\r\n    <div class=\"info-item\">\r\n      <span class=\"brand-icon-svg\">\r\n       <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z\"/></svg>\r\n          </span>\r\n      </span>\r\n      <span class=\"contact-text\">{{ person || '-' }}</span>\r\n    </div>\r\n\r\n    <!-- Phone -->\r\n    <div class=\"info-item\">\r\n      <span class=\"brand-icon-svg\">\r\n          <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2\"/></svg>\r\n          </span>\r\n      </span>\r\n      <span class=\"contact-text\">{{ phone }}</span>\r\n    </div>\r\n\r\n    <!-- Email -->\r\n    <div class=\"info-item\">\r\n      <span class=\"brand-icon-svg\">\r\n      <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z\"/></svg>\r\n          </span>\r\n      </span>\r\n      <a class=\"email-link\">{{ email }}</a>\r\n    </div>\r\n\r\n    <!-- Office -->\r\n    <div class=\"info-item\">\r\n      <span class=\"brand-icon-svg\">\r\n      <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3zm-8.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z\"/></svg>\r\n          </span>\r\n      </span>\r\n      <span class=\"contact-text\">{{ office }}</span>\r\n    </div>\r\n\r\n  </div>\r\n\r\n</mat-card>\r\n"
         },
         {
-            "name": "Components",
-            "id": "component-Components-77299d3b6048e335d2918d51d92dade6f78be76531b7532b53390ecf8718afb9f7328c3d23a50f9b6cbf91f9a92b71e2a729c62358fd4e6de3ac8e0167845e02",
-            "file": "src/app/pages 1/components/components.ts",
+            "name": "CountryComponent",
+            "id": "component-CountryComponent-989a9653c2e94c7622b8373a54b5361527cd8e59c32650024e09feea7c6590ab9dbda5e69af8d38e9e49a7f4c56d122411f8689985266543c01a7d8fb3e262d1",
+            "file": "src/app/cards/country.component/country.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-components",
-            "styleUrls": [
-                "./components.css"
-            ],
+            "selector": "upov-country",
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
-                "./components.html"
+                "./country.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
@@ -993,115 +1286,15 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "dataSource",
-                    "defaultValue": "[\r\n    {\r\n      reference: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    }\r\n  ]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "ApplicationData[]",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 52
-                },
-                {
-                    "name": "displayedColumns",
-                    "defaultValue": "[\r\n    'reference',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 42
-                }
-            ],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatTabsModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatButtonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatIconModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatDividerModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatTableModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatMenuModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatSortModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\nimport { MatTableModule } from '@angular/material/table';\r\n\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSortModule } from '@angular/material/sort';\r\n\r\nexport interface ApplicationData {\r\n  reference: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'app-components',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTabsModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    MatDividerModule,\r\n    MatTableModule,\r\n    MatMenuModule,\r\n    MatSortModule,\r\n  ],\r\n  templateUrl: './components.html',\r\n  styleUrls: ['./components.css']\r\n})\r\nexport class Components {\r\n\r\n\r\n  displayedColumns: string[] = [\r\n    'reference',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource: ApplicationData[] = [\r\n    {\r\n      reference: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      reference: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    }\r\n  ];\r\n\r\n}\r\n\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".header-container {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 0 20px;\r\n  background-color: #2b1d1b;\r\n  height: 60px;\r\n}\r\n\r\n/* Remove default tab border */\r\n::ng-deep .custom-tabs .mat-mdc-tab-header {\r\n  border-bottom: none;\r\n}\r\n\r\n/* ALL tab labels (inactive + active) */\r\n::ng-deep .custom-tabs .mdc-tab__text-label {\r\n  color: #00c853 !important;   /* green */\r\n  font-weight: 500;\r\n}\r\n\r\n/* Active tab text */\r\n::ng-deep .custom-tabs .mdc-tab--active .mdc-tab__text-label {\r\n  color: #00e676 !important;   /* brighter green */\r\n  font-weight: 600;\r\n}\r\n\r\n/* Underline indicator */\r\n::ng-deep .custom-tabs .mdc-tab-indicator__content--underline {\r\n  border-color: #00c853 !important;\r\n  border-width: 3px;\r\n}\r\n\r\n/* Optional: ripple color */\r\n::ng-deep .custom-tabs .mat-ripple-element {\r\n  background-color: rgba(0, 200, 83, 0.2) !important;\r\n}\r\n\r\n/* Right side buttons */\r\n.actions {\r\n  display: flex;\r\n  gap: 24px;\r\n}\r\n\r\n.action-btn {\r\n  color: #00c853 !important;\r\n  text-transform: none;\r\n  font-weight: 500;\r\n}\r\n\r\n/* Icons */\r\n.action-btn mat-icon {\r\n  margin-right: 6px;\r\n  color: #00c853 !important;\r\n}\r\n\r\n/* Divider */\r\n::ng-deep .mat-divider {\r\n  background-color: #00c853 !important;\r\n  height: 1px;\r\n}\r\n",
-                    "styleUrl": "./components.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<div class=\"header-container\">\r\n\r\n  <!-- LEFT SIDE TABS -->\r\n  <mat-tab-group\r\n    class=\"custom-tabs\"\r\n    animationDuration=\"0ms\"\r\n    mat-stretch-tabs=\"false\">\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        In Progress (5)\r\n      </ng-template>\r\n    </mat-tab>\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        Submitted (3)\r\n      </ng-template>\r\n    </mat-tab>\r\n\r\n  </mat-tab-group>\r\n\r\n  <!-- RIGHT SIDE ACTIONS -->\r\n  <div class=\"actions\">\r\n    <button mat-button class=\"action-btn\">\r\n      <mat-icon>filter_list</mat-icon>\r\n      Show filters\r\n    </button>\r\n\r\n    <button mat-button class=\"action-btn\">\r\n      <mat-icon>view_column</mat-icon>\r\n      Columns\r\n    </button>\r\n  </div>\r\n\r\n</div>\r\n\r\n<mat-divider></mat-divider>\r\n\r\n\r\n<div class=\"table-container\">\r\n\r\n  <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z1\">\r\n\r\n    <!-- Reference -->\r\n    <ng-container matColumnDef=\"reference\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        International Reference Number\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        <a href=\"#\" class=\"ref-link\">{{ element.reference }}</a>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Application -->\r\n    <ng-container matColumnDef=\"application\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Application data for\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.application }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Modified -->\r\n    <ng-container matColumnDef=\"modified\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Modified on\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.modified }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Crop -->\r\n    <ng-container matColumnDef=\"crop\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Crop\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.crop }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Denomination -->\r\n    <ng-container matColumnDef=\"denomination\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Proposed variety denomination\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.denomination }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Breeder -->\r\n    <ng-container matColumnDef=\"breeder\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        Breeder/Submitter reference\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{ element.breeder }}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions -->\r\n    <ng-container matColumnDef=\"actions\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Actions\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n          <mat-icon>more_horiz</mat-icon>\r\n        </button>\r\n\r\n        <mat-menu #menu=\"matMenu\">\r\n          <button mat-menu-item>View</button>\r\n          <button mat-menu-item>Edit</button>\r\n          <button mat-menu-item>Delete</button>\r\n        </mat-menu>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n\r\n  </table>\r\n\r\n</div>\r\n"
-        },
-        {
-            "name": "Components2",
-            "id": "component-Components2-5d89825ab480d26a46ac6c790ce16af3d0f067b8143509473cfc926daabc4a5add6e9925bcaee5d1fa524a0438eff24a8ff90d83b118a6daa4449870490cf6d8",
-            "file": "src/app/pages 1/components2/components2.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-components2",
-            "styleUrls": [
-                "./components2.css"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./components2.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "data",
-                    "defaultValue": "[\r\n    {\r\n      no: 1,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Tree: vigor',\r\n      rows: [\r\n        { english: 'very weak', example: 'Grenadier, Nield’s Drooper', note: 1 },\r\n        { english: 'very weak to weak', example: 'James Grieve, Redkan', note: 2 },\r\n        { english: 'weak', example: 'Alkmene, Regine', note: 3 },\r\n        { english: 'weak to medium', example: 'Piros, Pomforyou, Renora', note: 4 },\r\n        { english: 'medium', example: 'Gala, Pinova, Trajan', note: 5 },\r\n        { english: 'medium to strong', example: 'Dalili, Pia, Pivita', note: 6 },\r\n        { english: 'strong', example: 'Elstar, Rafzubin, Santana', note: 7 },\r\n        { english: 'strong to very strong', example: 'Bay 3484, Collina, Cripps Pink', note: 8 },\r\n        { english: 'very strong', example: 'Gloster, Ingrid Marie', note: 9 }\r\n      ]\r\n    },\r\n    {\r\n      no: 2,\r\n      code: 'QL',\r\n      type: 'VG',\r\n      title: 'Tree: type',\r\n      rows: [\r\n        { english: 'columnar', example: 'MacExcel, Wijcik', note: 1 },\r\n        { english: 'ramified', example: 'Elstar, Golden Delicious', note: 2 }\r\n      ]\r\n    },\r\n    {\r\n      no: 3,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Leaf: length',\r\n      rows: [\r\n        { english: 'very short', example: 'Kasumi', note: 1 },\r\n        { english: 'medium', example: '', note: 2 },\r\n        { english: '5', example: 'variety B', note: 3 }\r\n      ]\r\n    },\r\n    {\r\n      no: 4,\r\n      code: 'QL',\r\n      type: 'MS',\r\n      title: 'resistance test',\r\n      rows: [\r\n        { english: 'absent', example: '', note: 1 },\r\n        { english: 'present', example: '', note: 9 }\r\n      ]\r\n    }\r\n  ]",
+                    "name": "countryData",
+                    "defaultValue": "[\r\n    {\r\n      name: 'European Union (Community Plant Variety Office (C...',\r\n      code: 'EUI',\r\n        flag: 'https://flagcdn.com/w80/eu.png', // Replace with your actual paths\r\n      person: 'Mariano Mangieri',\r\n      email: 'mariano.mangieri@australia.pvp.com',\r\n      phone: '+54 11 4349 1354',\r\n      office: 'Plant Variety Protection Off...'\r\n    },\r\n    {\r\n      name: 'Australia',\r\n      code: 'AU',\r\n      flag: 'https://flagcdn.com/w80/au.png',\r\n      person: 'James Donovan',\r\n      email: 'j.donovan@australia.pvp.com',\r\n      phone: '+54 11 4349 1354',\r\n      office: 'Plant Breeder\\'s Rights'\r\n    }\r\n  ]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 23
+                    "line": 13
                 }
             ],
             "methodsClass": [],
@@ -1112,40 +1305,24 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatIconModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatButtonModule",
-                    "type": "module"
-                },
-                {
                     "name": "MatCardModule",
                     "type": "module"
                 },
                 {
-                    "name": "MatDividerModule",
+                    "name": "MatIconModule",
                     "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\n\r\n@Component({\r\n  selector: 'app-components2',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatIconModule,\r\n    MatButtonModule,\r\n    MatCardModule,\r\n    MatDividerModule\r\n  ],\r\n  templateUrl: './components2.html',\r\n  styleUrls: ['./components2.css']\r\n})\r\nexport class Components2 {\r\n\r\n  data = [\r\n    {\r\n      no: 1,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Tree: vigor',\r\n      rows: [\r\n        { english: 'very weak', example: 'Grenadier, Nield’s Drooper', note: 1 },\r\n        { english: 'very weak to weak', example: 'James Grieve, Redkan', note: 2 },\r\n        { english: 'weak', example: 'Alkmene, Regine', note: 3 },\r\n        { english: 'weak to medium', example: 'Piros, Pomforyou, Renora', note: 4 },\r\n        { english: 'medium', example: 'Gala, Pinova, Trajan', note: 5 },\r\n        { english: 'medium to strong', example: 'Dalili, Pia, Pivita', note: 6 },\r\n        { english: 'strong', example: 'Elstar, Rafzubin, Santana', note: 7 },\r\n        { english: 'strong to very strong', example: 'Bay 3484, Collina, Cripps Pink', note: 8 },\r\n        { english: 'very strong', example: 'Gloster, Ingrid Marie', note: 9 }\r\n      ]\r\n    },\r\n    {\r\n      no: 2,\r\n      code: 'QL',\r\n      type: 'VG',\r\n      title: 'Tree: type',\r\n      rows: [\r\n        { english: 'columnar', example: 'MacExcel, Wijcik', note: 1 },\r\n        { english: 'ramified', example: 'Elstar, Golden Delicious', note: 2 }\r\n      ]\r\n    },\r\n    {\r\n      no: 3,\r\n      code: 'QN',\r\n      type: 'MG/VG',\r\n      title: 'Leaf: length',\r\n      rows: [\r\n        { english: 'very short', example: 'Kasumi', note: 1 },\r\n        { english: 'medium', example: '', note: 2 },\r\n        { english: '5', example: 'variety B', note: 3 }\r\n      ]\r\n    },\r\n    {\r\n      no: 4,\r\n      code: 'QL',\r\n      type: 'MS',\r\n      title: 'resistance test',\r\n      rows: [\r\n        { english: 'absent', example: '', note: 1 },\r\n        { english: 'present', example: '', note: 9 }\r\n      ]\r\n    }\r\n  ];\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'upov-country',\r\n  standalone: true,\r\n  imports: [MatCardModule, MatIconModule],\r\n  templateUrl: './country.component.html',\r\n  styleUrl: './country.component.css'\r\n})\r\nexport class CountryComponent {\r\n  countryData = [\r\n    {\r\n      name: 'European Union (Community Plant Variety Office (C...',\r\n      code: 'EUI',\r\n        flag: 'https://flagcdn.com/w80/eu.png', // Replace with your actual paths\r\n      person: 'Mariano Mangieri',\r\n      email: 'mariano.mangieri@australia.pvp.com',\r\n      phone: '+54 11 4349 1354',\r\n      office: 'Plant Variety Protection Off...'\r\n    },\r\n    {\r\n      name: 'Australia',\r\n      code: 'AU',\r\n      flag: 'https://flagcdn.com/w80/au.png',\r\n      person: 'James Donovan',\r\n      email: 'j.donovan@australia.pvp.com',\r\n      phone: '+54 11 4349 1354',\r\n      office: 'Plant Breeder\\'s Rights'\r\n    }\r\n  ];\r\n}\r\n",
+            "styleUrl": "./country.component.css",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".page {\r\n  background: #2b1d1b;\r\n  min-height: 100vh;\r\n  padding: 30px;\r\n}\r\n\r\n/* Preview */\r\n.preview {\r\n  color: #ff9800;\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 6px;\r\n  font-weight: 600;\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.list-title {\r\n  color: #c7c7c7;\r\n  margin-bottom: 16px;\r\n  font-weight: 500;\r\n}\r\n\r\n/* Card */\r\n.card {\r\n  padding: 0;\r\n  border-radius: 8px;\r\n  overflow: hidden;\r\n}\r\n\r\n/* Header */\r\n.table-header {\r\n  display: flex;\r\n  padding: 14px;\r\n  background: #f5f5f5;\r\n  font-weight: 600;\r\n}\r\n\r\n/* Columns */\r\n.col-small { width: 60px; }\r\n.col-english { flex: 2; }\r\n.col-example { flex: 3; }\r\n.col-notes { width: 80px; }\r\n.col-delete { width: 80px; text-align: center; }\r\n\r\n/* Group row */\r\n.group-row {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 12px 14px;\r\n  background: #fafafa;\r\n  font-weight: 600;\r\n}\r\n\r\n.group-title {\r\n  color: #00695c;\r\n}\r\n\r\n/* Sub rows */\r\n.sub-row {\r\n  display: flex;\r\n  padding: 10px 14px;\r\n  background: #ffffff;\r\n}\r\n\r\n.sub-row:hover {\r\n  background: #f9f9f9;\r\n}\r\n\r\n/* Arrows */\r\n.arrows {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 4px;\r\n  color: #00695c;\r\n  font-size: 18px;\r\n}\r\n",
-                    "styleUrl": "./components2.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"page\">\r\n\r\n  <!-- PREVIEW LABEL -->\r\n  <div class=\"preview\">\r\n    <mat-icon>visibility</mat-icon>\r\n    PREVIEW\r\n  </div>\r\n\r\n  <div class=\"list-title\">\r\n    List of Characteristics (4)\r\n  </div>\r\n\r\n  <mat-card class=\"card\">\r\n\r\n    <!-- TABLE HEADER -->\r\n    <div class=\"table-header\">\r\n      <div class=\"col-small\"></div>\r\n      <div class=\"col-small\"></div>\r\n      <div class=\"col-small\"></div>\r\n      <div class=\"col-english\">English</div>\r\n      <div class=\"col-example\">Example Varieties</div>\r\n      <div class=\"col-notes\">Notes</div>\r\n      <div class=\"col-delete\">Delete</div>\r\n    </div>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <!-- DATA -->\r\n    <div *ngFor=\"let group of data\">\r\n\r\n      <!-- GROUP HEADER -->\r\n      <div class=\"group-row\">\r\n\r\n        <div class=\"col-small arrows\">\r\n          <mat-icon>arrow_upward</mat-icon>\r\n          <mat-icon>arrow_downward</mat-icon>\r\n        </div>\r\n\r\n        <div class=\"col-small\">{{ group.no }}</div>\r\n        <div class=\"col-small\">{{ group.code }}</div>\r\n        <div class=\"col-small\">{{ group.type }}</div>\r\n\r\n        <div class=\"col-english group-title\">\r\n          {{ group.title }}\r\n        </div>\r\n\r\n        <div class=\"col-example\"></div>\r\n        <div class=\"col-notes\"></div>\r\n\r\n        <div class=\"col-delete\">\r\n          <button mat-icon-button>\r\n            <mat-icon>delete_outline</mat-icon>\r\n          </button>\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <!-- SUB ROWS -->\r\n      <div *ngFor=\"let row of group.rows\" class=\"sub-row\">\r\n\r\n        <div class=\"col-small\"></div>\r\n        <div class=\"col-small\"></div>\r\n        <div class=\"col-small\"></div>\r\n        <div class=\"col-small\"></div>\r\n\r\n        <div class=\"col-english\">{{ row.english }}</div>\r\n        <div class=\"col-example\">{{ row.example }}</div>\r\n        <div class=\"col-notes\">{{ row.note }}</div>\r\n        <div class=\"col-delete\"></div>\r\n\r\n      </div>\r\n\r\n      <mat-divider></mat-divider>\r\n\r\n    </div>\r\n\r\n  </mat-card>\r\n\r\n</div>\r\n"
+            "templateData": "<div class=\"main-wrapper\">\r\n  @for (item of countryData; track item.name) {\r\n    <mat-card class=\"custom-card\">\r\n      <div class=\"card-header\">\r\n        <div class=\"title-container\">\r\n          <span class=\"country-name\">{{ item.name }}</span>\r\n          <span class=\"country-code\">({{ item.code }})</span>\r\n        </div>\r\n        <img [src]=\"item.flag\" class=\"flag-icon\" alt=\"flag\">\r\n      </div>\r\n\r\n      <div class=\"chip-row\">\r\n        <span class=\"custom-chip\">All genera and species</span>\r\n      </div>\r\n\r\n      <div class=\"info-grid\">\r\n        <div class=\"info-item\">\r\n          <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z\"/></svg>\r\n          </span>\r\n          <span class=\"contact-text\">{{ item.person || '-' }}</span>\r\n        </div>\r\n\r\n        <div class=\"info-item\">\r\n          <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2\"/></svg>\r\n          </span>\r\n          <span class=\"contact-text\">{{ item.phone }}</span>\r\n        </div>\r\n\r\n        <div class=\"info-item\">\r\n          <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z\"/></svg>\r\n          </span>\r\n          <a class=\"email-link\">{{ item.email }}</a>\r\n        </div>\r\n\r\n        <div class=\"info-item\">\r\n          <span class=\"brand-icon-svg\">\r\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\"><path d=\"M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3zm-8.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z\"/></svg>\r\n          </span>\r\n          <span class=\"contact-text\">{{ item.office }}</span>\r\n        </div>\r\n      </div>\r\n    </mat-card>\r\n  }\r\n</div>\r\n"
         },
         {
             "name": "DividerComponent",
@@ -1688,6 +1865,69 @@
             "extends": []
         },
         {
+            "name": "Panel",
+            "id": "component-Panel-b91c3f85b700d54ec6c1af329899f5c13ffab9f8b7a080b0d76bae2ff13345a46e0686a6faf85ea207e6b81410d04f5fc3d2f93bd1893335955ab99548ce04ab",
+            "file": "src/app/cards/panel/panel.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "upov-panel",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./panel.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "panelOpenState",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatExpansionModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatExpansionModule } from '@angular/material/expansion';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'upov-panel',\r\n  standalone: true,\r\n  imports: [CommonModule, MatExpansionModule, MatIconModule],\r\n  templateUrl: './panel.html',\r\n  styleUrl: './panel.css',\r\n})\r\nexport class Panel {\r\n  panelOpenState = false;\r\n}\r\n",
+            "styleUrl": "./panel.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"panel-wrapper\">\r\n  <mat-expansion-panel\r\n    class=\"custom-panel mat-elevation-z0\"\r\n    [expanded]=\"panelOpenState\"\r\n    (opened)=\"panelOpenState = true\"\r\n    (closed)=\"panelOpenState = false\"\r\n    hideToggle=\"true\">\r\n\r\n    <mat-expansion-panel-header class=\"custom-header\">\r\n      <div class=\"header-container\">\r\n        <div class=\"main-info-row\">\r\n          <div class=\"info-item\">\r\n            <span class=\"label-text\">Main Common Name(s):</span>\r\n            <div class=\"value-text\">European Pear</div>\r\n          </div>\r\n\r\n          <div class=\"info-item1\">\r\n            <span class=\"label-text\">UPOV Code(s):</span>\r\n            <div class=\"value-text\">PYRUS_COM; PYRUS_BCO; PYRUS_CPB; PYRUS_CUS</div>\r\n          </div>\r\n\r\n          <div class=\"button-container\">\r\n            <button mat-flat-button class=\"submit-btn\">\r\n              <mat-icon>check_circle</mat-icon>\r\n              <span>Submit</span>\r\n            </button>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"bottom-row\" *ngIf=\"!panelOpenState\">\r\n          <div class=\"toggle-section\">\r\n            <span class=\"more-details-link\">\r\n              <mat-icon>expand_more</mat-icon> More details\r\n            </span>\r\n          </div>\r\n          <div class=\"meta-section\">\r\n            <span class=\"tg-code\">TG/export_test_2</span> <br>\r\n            <span class=\"save-date\">Saved: 02 Dec, 2025 - 31 Dec, 2025</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </mat-expansion-panel-header>\r\n\r\n    <div class=\"expanded-content\">\r\n      <div class=\"content-section\">\r\n        <span class=\"label-text botanical-label\">Botanical Name(s):</span>\r\n        <p class=\"botanical-text\">\r\n        Pyrus communis L., Pyrus asiae-mediae (Popov) Maleev, Pyrus balansae Decne., Pyrus bourgaeana Decne., Pyrus communis L. subsp. <br> bourgaeana (Decne.) Nyman,\r\n        Pyrus communis L. var. mariana Willk., Pyrus domestica Medik., Pyrus elata Rubtzov, Pyrus medvedevii <br> Rubtzov; Pyrus × bretschneideri Rehder × Pyrus communis L.,\r\n        Enter Other Botanical Name; Hybrids between Pyrus communis, Pyrus <br>  pyrifolia and Pyrus × bretschneideri,\r\n\r\nPyrus communis × Pyrus pyrifolia × Pyrus × bretschneideri; Hybrids between Pyrus communis  and P <br> ussuriensis,\r\n\r\nPyrus communis L. × P. ussuriensis Maxim. & Rupr.\r\n        </p>\r\n      </div>\r\n\r\n      <div class=\"links-section\">\r\n        <span class=\"label-text1\">Related links:</span>\r\n        <a href=\"#\" class=\"external-link\">Quantity of plant material required (GN7) <mat-icon>open_in_new</mat-icon></a>\r\n        <a href=\"#\" class=\"external-link\">Quantity of plant material required (GN6) <mat-icon>open_in_new</mat-icon></a>\r\n      </div>\r\n\r\n      <div class=\"input-section\">\r\n        <label class=\"label-text\">Please indicate other associated UPOV documents:</label>\r\n        <div class=\"rich-text-editor\">\r\n          <div class=\"editor-toolbar\">\r\n             <mat-icon>help_outline</mat-icon>\r\n             <mat-icon>accessibility</mat-icon>\r\n             <span class=\"toolbar-text\">Aa <mat-icon>expand_more</mat-icon></span>\r\n             <mat-icon>format_list_bulleted</mat-icon>\r\n             <mat-icon>code</mat-icon>\r\n             <mat-icon>format_color_fill</mat-icon>\r\n             <mat-icon>link</mat-icon>\r\n             <mat-icon>grid_on</mat-icon>\r\n             <mat-icon>image</mat-icon>\r\n          </div>\r\n          <textarea placeholder=\"Add explanation here\"></textarea>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"bottom-row expanded-footer\" (click)=\"panelOpenState = false\">\r\n        <div class=\"toggle-section\">\r\n          <span class=\"more-details-link\">\r\n            <mat-icon>expand_less</mat-icon> Less details\r\n          </span>\r\n        </div>\r\n        <div class=\"meta-section\">\r\n          <span class=\"tg-code\">TG/export_test_2</span> <br>\r\n          <span class=\"save-date\">Saved: 02 Dec, 2025 - 31 Dec, 2025</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </mat-expansion-panel>\r\n</div>\r\n"
+        },
+        {
             "name": "TabComponent",
             "id": "component-TabComponent-a4d00d7cd8f0694799d80532b71094e78acca8f35ba91e043ef2770a6a3760771850498ed61adaf1ef49bfb290a47423514d9436559fa82887c4f4346d6521a5",
             "file": "src/pages/components/Atoms/tab.component/tab.component.ts",
@@ -1813,126 +2053,21 @@
             "templateData": "<ng-container *ngIf=\"!isLink\">\r\n  {{ value }}\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"isLink\">\r\n  <a href=\"#\" class=\"cell-link\">{{ value }}</a>\r\n</ng-container>\r\n"
         },
         {
-            "name": "TablesComponent",
-            "id": "component-TablesComponent-bc338a1ba662897e95b6763710e6bcb102772c8de33df20fb71d697c1727012e17c38d3ed98497518ec4f6a6d65310299ebac60373595cc7c34afe09737caa21",
-            "file": "src/stories/tables.component/tables.component.ts",
+            "name": "TablesComponent1",
+            "id": "component-TablesComponent1-e6d432387cdc6e95c683a33e3c177b0778ba6e16a805ba803806f4b5889fdcadaccba034c1608ef0f46968fdb5a15ec0cf560a0a38146515a4bcba5bad9c2e67",
+            "file": "src/app/pages 1/tables.component1/tables.component1.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-tables",
+            "selector": "app-tables-component1",
             "styleUrls": [
-                "./tables.component.css"
+                "./tables.component1.css"
             ],
             "styles": [],
             "templateUrl": [
-                "./tables.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "activeTab",
-                    "defaultValue": "'progress'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 32,
-                    "type": "\"progress\" | \"submitted\"",
-                    "decorators": []
-                },
-                {
-                    "name": "dataSource",
-                    "defaultValue": "[]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 34,
-                    "type": "TableRow[]",
-                    "decorators": []
-                },
-                {
-                    "name": "showFilters",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 33,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "displayedColumns",
-                    "defaultValue": "[\r\n    'ref',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 36
-                }
-            ],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatTableModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatIconModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatMenuModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatProgressBarModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\n\r\nexport interface TableRow {\r\n  ref: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-tables',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTableModule,\r\n    MatIconModule,\r\n    MatMenuModule,\r\n    MatProgressBarModule\r\n  ],\r\n  templateUrl: './tables.component.html',\r\n  styleUrls: ['./tables.component.css']\r\n})\r\nexport class TablesComponent {\r\n\r\n  @Input() activeTab: 'progress' | 'submitted' = 'progress';\r\n  @Input() showFilters = true;\r\n  @Input() dataSource: TableRow[] = [];\r\n\r\n  displayedColumns: string[] = [\r\n    'ref',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".page-wrapper {\r\n  background: #f4f6f7;\r\n  padding: 30px;\r\n}\r\n\r\n.card-container {\r\n  background: white;\r\n  border-radius: 10px;\r\n  box-shadow: 0 6px 25px rgba(0,0,0,0.08);\r\n  overflow: hidden;\r\n}\r\n\r\n.header-wrapper {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 18px 24px 0 24px;\r\n}\r\n\r\n.tabs {\r\n  display: flex;\r\n  gap: 28px;\r\n  font-weight: 500;\r\n}\r\n\r\n.tab {\r\n  position: relative;\r\n  padding-bottom: 10px;\r\n  cursor: pointer;\r\n  color: #444;\r\n}\r\n\r\n.tab.active {\r\n  color: #184d3c;\r\n}\r\n\r\n.tab.active::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -2px;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 3px;\r\n  background: #184d3c;\r\n}\r\n\r\n.actions {\r\n  color: #184d3c;\r\n  cursor: pointer;\r\n}\r\n\r\n.divider {\r\n  height: 1px;\r\n  background: #dcdcdc;\r\n  margin-top: 10px;\r\n}\r\n\r\n.table-wrapper {\r\n  padding: 0 24px 20px 24px;\r\n  overflow-x: auto;\r\n}\r\n\r\n.custom-table {\r\n  width: 100%;\r\n}\r\n\r\nth {\r\n  background: #f3f3f3;\r\n  padding: 14px 12px;\r\n  border-bottom: 1px solid #dcdcdc;\r\n}\r\n\r\ntd {\r\n  padding: 14px 12px;\r\n  border-bottom: 1px solid #ececec;\r\n}\r\n\r\n.header-title {\r\n  font-weight: 600;\r\n  margin-bottom: 6px;\r\n}\r\n\r\n.filter-input {\r\n  width: 100%;\r\n  height: 30px;\r\n  border-radius: 6px;\r\n  border: 1px solid #9e9e9e;\r\n  padding: 0 8px;\r\n  font-size: 13px;\r\n}\r\n\r\n.link {\r\n  color: #184d3c;\r\n  font-weight: 600;\r\n}\r\n\r\n.actions-cell {\r\n  text-align: center;\r\n}\r\n\r\n.bottom-progress {\r\n  margin-top: 16px;\r\n  height: 6px;\r\n}\r\n",
-                    "styleUrl": "./tables.component.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<div class=\"page-wrapper\">\r\n  <div class=\"card-container\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header-wrapper\">\r\n      <div class=\"tabs\">\r\n        <div\r\n          class=\"tab\"\r\n          [class.active]=\"activeTab === 'progress'\"\r\n          (click)=\"activeTab = 'progress'\">\r\n          In Progress\r\n        </div>\r\n\r\n        <div\r\n          class=\"tab\"\r\n          [class.active]=\"activeTab === 'submitted'\"\r\n          (click)=\"activeTab = 'submitted'\">\r\n          Submitted\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"actions\">\r\n        <div class=\"action\" (click)=\"showFilters = !showFilters\">\r\n          <mat-icon>filter_list</mat-icon>\r\n          <span>{{ showFilters ? 'Hide filters' : 'Show filters' }}</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"divider\"></div>\r\n\r\n    <!-- TABLE -->\r\n    <div class=\"table-wrapper\">\r\n      <table mat-table [dataSource]=\"dataSource\" class=\"custom-table\">\r\n\r\n        <!-- REF -->\r\n        <ng-container matColumnDef=\"ref\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <div class=\"header-title\">Reference</div>\r\n            <input *ngIf=\"showFilters\" class=\"filter-input\" placeholder=\"Search...\" />\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\" class=\"link\">\r\n            {{ row.ref }}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- APPLICATION -->\r\n        <ng-container matColumnDef=\"application\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <div class=\"header-title\">Application</div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{ row.application }}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- MODIFIED -->\r\n        <ng-container matColumnDef=\"modified\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <div class=\"header-title\">Modified</div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{ row.modified }}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- CROP -->\r\n        <ng-container matColumnDef=\"crop\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <div class=\"header-title\">Crop</div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{ row.crop }}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- DENOMINATION -->\r\n        <ng-container matColumnDef=\"denomination\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <div class=\"header-title\">Denomination</div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{ row.denomination || '-' }}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- BREEDER -->\r\n        <ng-container matColumnDef=\"breeder\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <div class=\"header-title\">Breeder</div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{ row.breeder || '-' }}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- ACTIONS -->\r\n        <ng-container matColumnDef=\"actions\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"actions-header\">\r\n            Actions\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\" class=\"actions-cell\">\r\n            <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n            </button>\r\n          </td>\r\n        </ng-container>\r\n\r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n\r\n      </table>\r\n\r\n      <mat-progress-bar mode=\"determinate\" value=\"55\" class=\"bottom-progress\">\r\n      </mat-progress-bar>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n\r\n<mat-menu #menu=\"matMenu\">\r\n  <button mat-menu-item>Edit</button>\r\n  <button mat-menu-item>Delete</button>\r\n</mat-menu>\r\n"
-        },
-        {
-            "name": "TablesComponent",
-            "id": "component-TablesComponent-177dcf7a245a2cbc600e9d5d5fde3eb2ab11740574390c229c9a27ac89d9fd28387205415ecdc68c8a6258eae76f516a371a3876a39b16731a68d2ebd7c7f999-1",
-            "file": "src/app/pages 1/tables.component/tables.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-tables",
-            "styleUrls": [
-                "./tables.component.css"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./tables.component.html"
+                "./tables.component1.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
@@ -1940,26 +2075,15 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "activeTab",
-                    "defaultValue": "'progress'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "\"progress\" | \"submitted\"",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 32
-                },
-                {
                     "name": "dataSource",
-                    "defaultValue": "[\r\n    {\r\n      ref: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    },\r\n    {\r\n      ref: 'XU_30202500000145',\r\n      application: 'PBR',\r\n      modified: '21/04/2024',\r\n      crop: 'Cucumis melo L.',\r\n      denomination: 'MELON VARIETY',\r\n      breeder: 'ggs'\r\n    }\r\n  ]",
+                    "defaultValue": "new MatTableDataSource([\r\n    {\r\n      ref: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    },\r\n    {\r\n      ref: 'XU_30202500000145',\r\n      application: 'PBR',\r\n      modified: '21/04/2024',\r\n      crop: 'Cucumis melo L.',\r\n      denomination: 'MELON VARIETY',\r\n      breeder: 'ggs'\r\n    }\r\n  ])",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "TableRow[]",
+                    "type": "unknown",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 45
+                    "line": 42
                 },
                 {
                     "name": "displayedColumns",
@@ -1970,21 +2094,32 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 35
+                    "line": 32
                 },
                 {
-                    "name": "showFilters",
-                    "defaultValue": "true",
+                    "name": "filterValues",
+                    "defaultValue": "{\r\n    ref: '',\r\n    application: '',\r\n    modified: '',\r\n    crop: '',\r\n    denomination: '',\r\n    breeder: ''\r\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "unknown",
+                    "type": "any",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 33
+                    "line": 77
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "applyFilter",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 100,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -2000,6 +2135,22 @@
                     "type": "module"
                 },
                 {
+                    "name": "MatTabsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTableModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
                     "name": "MatIconModule",
                     "type": "module"
                 },
@@ -2008,128 +2159,36 @@
                     "type": "module"
                 },
                 {
-                    "name": "MatProgressBarModule",
+                    "name": "MatFormFieldModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatInputModule",
                     "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\n\r\nexport interface TableRow {\r\n  ref: string;\r\n  application: string;\r\n  modified: string;\r\n  crop: string;\r\n  denomination: string;\r\n  breeder: string;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-tables',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTableModule,\r\n    MatIconModule,\r\n    MatMenuModule,\r\n    MatProgressBarModule\r\n  ],\r\n  templateUrl: './tables.component.html',\r\n  styleUrls: ['./tables.component.css']\r\n})\r\nexport class TablesComponent {\r\n\r\n  activeTab: 'progress' | 'submitted' = 'progress';\r\n  showFilters = true;\r\n\r\n  displayedColumns: string[] = [\r\n    'ref',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource: TableRow[] = [\r\n    {\r\n      ref: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    },\r\n    {\r\n      ref: 'XU_30202500000145',\r\n      application: 'PBR',\r\n      modified: '21/04/2024',\r\n      crop: 'Cucumis melo L.',\r\n      denomination: 'MELON VARIETY',\r\n      breeder: 'ggs'\r\n    }\r\n  ];\r\n\r\n\r\n\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { MatTableModule, MatTableDataSource } from '@angular/material/table';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\n\r\n@Component({\r\n  selector: 'app-tables-component1',\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    MatTableModule,\r\n    MatTabsModule,\r\n    FormsModule,\r\n    MatTableModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    MatMenuModule,\r\n    MatFormFieldModule,\r\n    MatInputModule\r\n  ],\r\n  templateUrl: './tables.component1.html',\r\n  styleUrls: ['./tables.component1.css']\r\n})\r\nexport class TablesComponent1 {\r\n\r\n  displayedColumns: string[] = [\r\n    'ref',\r\n    'application',\r\n    'modified',\r\n    'crop',\r\n    'denomination',\r\n    'breeder',\r\n    'actions'\r\n  ];\r\n\r\n  dataSource = new MatTableDataSource([\r\n    {\r\n      ref: 'XU_30202600000002',\r\n      application: 'PBR',\r\n      modified: '10/12/2024',\r\n      crop: 'Lactuca sativa L.',\r\n      denomination: 'testccc',\r\n      breeder: 'test viet nam'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000155',\r\n      application: 'National Listing (VL)',\r\n      modified: '12/06/2024',\r\n      crop: 'Solanum lycopersicum L.',\r\n      denomination: '',\r\n      breeder: 'TEST DEN'\r\n    },\r\n    {\r\n      ref: 'XU_30202500000154',\r\n      application: 'PBR',\r\n      modified: '08/06/2024',\r\n      crop: 'Allium oschaninii O. Fedtsch.',\r\n      denomination: 'Shallot variety',\r\n      breeder: ''\r\n    },\r\n    {\r\n      ref: 'XU_30202500000145',\r\n      application: 'PBR',\r\n      modified: '21/04/2024',\r\n      crop: 'Cucumis melo L.',\r\n      denomination: 'MELON VARIETY',\r\n      breeder: 'ggs'\r\n    }\r\n  ]);\r\n\r\n  filterValues: any = {\r\n    ref: '',\r\n    application: '',\r\n    modified: '',\r\n    crop: '',\r\n    denomination: '',\r\n    breeder: ''\r\n  };\r\n\r\n  constructor() {\r\n    this.dataSource.filterPredicate = (data: any, filter: string) => {\r\n      const search = JSON.parse(filter);\r\n      return (\r\n        data.ref.toLowerCase().includes(search.ref) &&\r\n        data.application.toLowerCase().includes(search.application) &&\r\n        data.modified.toLowerCase().includes(search.modified) &&\r\n        data.crop.toLowerCase().includes(search.crop) &&\r\n        data.denomination.toLowerCase().includes(search.denomination) &&\r\n        data.breeder.toLowerCase().includes(search.breeder)\r\n      );\r\n    };\r\n  }\r\n\r\n  applyFilter() {\r\n    this.dataSource.filter = JSON.stringify(this.filterValues);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "/* PAGE BACKGROUND */\r\n.page-wrapper {\r\n  background: #f5f6f7;\r\n  padding: 40px;\r\n}\r\n\r\n/* WHITE CARD */\r\n.card-container {\r\n  background: white;\r\n  border-radius: 8px;\r\n  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);\r\n  overflow: hidden;\r\n}\r\n\r\n/* HEADER */\r\n.header-wrapper {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: flex-end;\r\n  padding: 20px 24px 0 24px;\r\n}\r\n\r\n.tabs {\r\n  display: flex;\r\n  gap: 32px;\r\n  font-size: 16px;\r\n  font-weight: 500;\r\n}\r\n\r\n.tab {\r\n  position: relative;\r\n  cursor: pointer;\r\n  padding-bottom: 10px;\r\n  color: #4a4a4a;\r\n}\r\n\r\n.tab.active {\r\n  color: #1b5e20;\r\n}\r\n\r\n.tab.active::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -1px;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 3px;\r\n  background: #1b5e20;\r\n  border-radius: 2px;\r\n}\r\n\r\n/* ACTIONS */\r\n.actions {\r\n  display: flex;\r\n  gap: 28px;\r\n  align-items: center;\r\n  color: #1b5e20;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n}\r\n\r\n.actions mat-icon {\r\n  font-size: 18px;\r\n}\r\n\r\n/* DIVIDER */\r\n.divider {\r\n  height: 1px;\r\n  background: #e0e0e0;\r\n  margin-top: 12px;\r\n}\r\n\r\n/* TABLE */\r\n.table-wrapper {\r\n  padding: 0 18px 10px 18px;\r\n}\r\n\r\n.custom-table {\r\n  width: 500px;\r\n  font-size: 14px;\r\n}\r\n\r\nth {\r\n  background: #f3f3f3;\r\n  padding: 16px 12px;\r\n  border-bottom: 1px solid #dddddd;\r\n  font-weight: 600;\r\n  color: #444;\r\n}\r\n\r\ntd {\r\n  padding: 16px 12px;\r\n  border-bottom: 1px solid #eeeeee;\r\n}\r\n\r\n.link {\r\n  color: #1b5e20;\r\n  font-weight: 600;\r\n  cursor: pointer;\r\n}\r\n\r\n/* ACTION ALIGN */\r\n.actions-cell {\r\n  text-align: right;\r\n}\r\n\r\n.actions-header {\r\n  text-align: right;\r\n}\r\n\r\n/* PROGRESS BAR */\r\n.bottom-progress {\r\n  margin-top: 16px;\r\n  height: 6px;\r\n  border-radius: 4px;\r\n}\r\n\r\n\r\n\r\n\r\n.page-wrapper {\r\n  background: #f4f6f7;\r\n  padding: 30px;\r\n}\r\n\r\n.card-container {\r\n  background: white;\r\n  border-radius: 10px;\r\n  box-shadow: 0 6px 25px rgba(0,0,0,0.08);\r\n  overflow: hidden;\r\n}\r\n\r\n.header-wrapper {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 18px 24px 0 24px;\r\n}\r\n\r\n.tabs {\r\n  display: flex;\r\n  gap: 28px;\r\n  font-size: 16px;\r\n  font-weight: 500;\r\n}\r\n\r\n.tab {\r\n  position: relative;\r\n  padding-bottom: 10px;\r\n  cursor: pointer;\r\n  color: #444;\r\n}\r\n\r\n.tab.active {\r\n  color: #184d3c;\r\n}\r\n\r\n.tab.active::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -2px;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 3px;\r\n  background: #184d3c;\r\n}\r\n\r\n.actions-top {\r\n  display: flex;\r\n  gap: 24px;\r\n  align-items: center;\r\n  color: #184d3c;\r\n  font-weight: 500;\r\n}\r\n\r\n.divider {\r\n  height: 1px;\r\n  background: #dcdcdc;\r\n  margin-top: 10px;\r\n}\r\n\r\n.table-wrapper {\r\n  padding: 0 24px 20px 24px;\r\n  overflow-x: auto;\r\n}\r\n\r\n.custom-table {\r\n  width: 100%;\r\n  border-collapse: separate;\r\n  border-spacing: 0;\r\n}\r\n\r\nth {\r\n  background: #f3f3f3;\r\n  padding: 14px 12px 12px 12px;\r\n  vertical-align: top;\r\n  border-bottom: 1px solid #dcdcdc;\r\n}\r\n\r\n.header-title {\r\n  font-weight: 600;\r\n  font-size: 13px;\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.filter-input {\r\n  width: 100%;\r\n  height: 32px;\r\n  border-radius: 6px;\r\n  border: 1px solid #9e9e9e;\r\n  padding: 0 10px;\r\n  font-size: 13px;\r\n  background: white;\r\n  /* margin-top: 10px;\r\n   */\r\n\r\n}\r\n\r\n.date-wrapper {\r\n  position: relative;\r\n}\r\n\r\n.calendar-icon {\r\n  position: absolute;\r\n  right: 8px;\r\n  top: 8px;\r\n  font-size: 16px;\r\n}\r\n\r\ntd {\r\n  padding: 14px 12px;\r\n  border-bottom: 1px solid #ececec;\r\n}\r\n\r\n.link {\r\n  color: #184d3c;\r\n  font-weight: 600;\r\n}\r\n\r\n.sticky-col {\r\n  position: sticky;\r\n  right: 0;\r\n  background: white;\r\n  border-left: 1px solid #dcdcdc;\r\n  z-index: 3;\r\n}\r\n\r\n.sticky-col::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  left: -6px;\r\n  top: 0;\r\n  height: 100%;\r\n  width: 6px;\r\n  background: linear-gradient(to left, rgba(0,0,0,0.08), transparent);\r\n}\r\n\r\n.actions-header,\r\n.actions-cell {\r\n  text-align: center;\r\n  min-width: 90px;\r\n}\r\n\r\n.bottom-progress {\r\n  margin-top: 16px;\r\n  height: 6px;\r\n  border-radius: 4px;\r\n}\r\n\r\n\r\n\r\n.preview-page {\r\n  background: #f5f4f2;\r\n  padding: 40px;\r\n}\r\n\r\n.preview-card {\r\n  background: #e9e7e1;\r\n  padding: 20px 24px 30px;\r\n  border-radius: 8px;\r\n}\r\n\r\n.preview-label {\r\n  color: #b0702d;\r\n  font-weight: 600;\r\n  font-size: 14px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.preview-title {\r\n  margin: 0 0 16px;\r\n  font-weight: 600;\r\n}\r\n\r\n.table-wrapper {\r\n  background: white;\r\n  border-radius: 6px;\r\n  overflow: hidden;\r\n}\r\n\r\n.character-table {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 14px;\r\n}\r\n\r\n.character-table th {\r\n  background: #f3f3f3;\r\n  padding: 12px;\r\n  text-align: left;\r\n  border-bottom: 1px solid #ddd;\r\n  font-weight: 600;\r\n}\r\n\r\n.character-table td {\r\n  padding: 10px 12px;\r\n  vertical-align: top;\r\n}\r\n\r\n.section-head {\r\n  background: #f8f8f8;\r\n  border-top: 1px solid #ddd;\r\n  font-weight: 600;\r\n}\r\n\r\n.section-body {\r\n  border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.group-title {\r\n  font-weight: 600;\r\n  color: #1d4c3c;\r\n  margin-bottom: 6px;\r\n}\r\n\r\n.notes {\r\n  text-align: center;\r\n  width: 60px;\r\n}\r\n\r\n\r\n.col-move {\r\n  width: 40px;\r\n  text-align: center;\r\n  color: #666;\r\n}\r\n\r\n.col-no {\r\n  width: 60px;\r\n}\r\n\r\n.col-type {\r\n  width: 30%;\r\n}\r\n\r\n.col-example {\r\n  width: 40%;\r\n}\r\n\r\n.col-notes {\r\n  width: 60px;\r\n}\r\n\r\n.col-delete {\r\n  width: 60px;\r\n  text-align: center;\r\n  color: #666;\r\n  cursor: pointer;\r\n}\r\n",
-                    "styleUrl": "./tables.component.css"
+                    "data": "/* ===== GOOGLE FONT ===== */\r\n@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap');\r\n\r\n/* ===== GLOBAL RESET ===== */\r\nhtml, body {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: 'Figtree', sans-serif;\r\n  background: #ffffff;\r\n}\r\n\r\n/* ===== FORCE MATERIAL OVERRIDE ===== */\r\n.mat-typography,\r\n.mat-mdc-table,\r\n.mat-mdc-header-cell,\r\n.mat-mdc-cell,\r\n.mat-mdc-button,\r\n.mat-mdc-icon-button,\r\n.mat-mdc-form-field,\r\n.mat-mdc-input-element {\r\n  font-family: 'Figtree', sans-serif !important;\r\n}\r\n\r\n/* ===== TABLE HEADER STYLE (Match Screenshot) ===== */\r\n.mat-mdc-header-cell {\r\n  font-weight: 600 !important;\r\n  font-size: 14px !important;\r\n  letter-spacing: 0.2px;\r\n  color: #2E2E2E;\r\n}\r\n\r\n/* ===== TABLE BODY STYLE ===== */\r\n.mat-mdc-cell {\r\n  font-weight: 400;\r\n  font-size: 14px;\r\n  color: #333;\r\n}\r\n\r\n/* ===== TABS STYLE ===== */\r\n.tab {\r\n  font-weight: 700;\r\n  font-size: 18px;\r\n  line-height: 27px;\r\n  letter-spacing: 0.2px;\r\n}\r\n\r\n/* ===== ACTION BUTTON TEXT ===== */\r\n.action-btn {\r\n  font-weight: 600;\r\n  font-size: 14px;\r\n}\r\n\r\n\r\n.container {\r\n  padding: 24px;\r\n  background: #ffffff;\r\n\r\n}\r\n\r\n\r\n/* HEADER LAYOUT */\r\n.top-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  border-bottom: 1px solid #DADADA;\r\n  padding-bottom: 8px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n/* REMOVE MATERIAL TAB BACKGROUND */\r\n.custom-tabs ::ng-deep .mat-mdc-tab-header {\r\n  border-bottom: none;\r\n}\r\n\r\n/* TAB LABEL STYLE */\r\n.custom-tabs ::ng-deep .mdc-tab__text-label {\r\n  font-family: 'Figtree', sans-serif;\r\n  font-weight: 700;\r\n  font-size: 18px;\r\n  color: #7A8B8A;\r\n}\r\n\r\n/* ACTIVE TAB */\r\n.custom-tabs ::ng-deep .mdc-tab--active .mdc-tab__text-label {\r\n  color: #1C4240;\r\n}\r\n\r\n/* ACTIVE INDICATOR LINE */\r\n.custom-tabs ::ng-deep .mdc-tab-indicator__content--underline {\r\n  border-color: #1C4240;\r\n  border-width: 3px;\r\n}\r\n\r\n/* RIGHT ACTIONS */\r\n.top-actions {\r\n  display: flex;\r\n  font-size: large;\r\n  gap: 16px;\r\n}\r\n\r\n/* BUTTON STYLE */\r\n.action-btn {\r\n  font-family: 'Figtree', sans-serif;\r\n  font-weight: 600;\r\n  font-size: 14px;\r\n  color: #1C4240;\r\n  text-transform: none;\r\n}\r\n\r\n.action-btn mat-icon {\r\n  margin-right: 6px;\r\n  font-size: 20px;\r\n  color: #1C4240;\r\n\r\n}\r\n\r\n\r\n\r\n/* ===== TABLE ===== */\r\n\r\n.custom-table {\r\n  width: 100%;\r\n}\r\n\r\n.mat-header-cell {\r\n  font-weight: 700;\r\n  font-size: 14px;\r\n  color: #2E2E2E;\r\n  vertical-align: top;\r\n}\r\n\r\n.mat-cell {\r\n  font-size: 14px;\r\n  color: #333;\r\n}\r\n\r\n/* Link style reference */\r\n.ref-link {\r\n  color: #1C4240;\r\n  font-weight: 600;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Filter input style (like screenshot rounded grey box) */\r\n\r\n.filter-input {\r\n  width: 100%;\r\n  margin-top: 8px;\r\n  padding: 6px 10px;\r\n  font-size: 13px;\r\n  border-radius: 6px;\r\n  border: 1px solid #C8D0CF;\r\n  background: #F5F7F7;\r\n  outline: none;\r\n}\r\n\r\n.filter-input:focus {\r\n  border: 1px solid #1C4240;\r\n  background: #ffffff;\r\n}\r\n\r\n\r\n\r\n/* Wrapper (light grey background bar) */\r\n.top-progress-wrapper {\r\n  width: 100%;\r\n  height: 14px;\r\n/* justify-content: center; */\r\nalign-items: center;\r\n  background: #d9d9d9;\r\n  border-radius: 20px;\r\n  overflow: hidden;\r\n  margin: 20px 0;\r\n}\r\n\r\n/* Green filled portion */\r\n.top-progress-bar {\r\n  width: 58%; /* change percentage as needed */\r\n  height: 100%;\r\n  background: #184c44; /* dark green */\r\n  border-radius: 20px;\r\n\r\n}\r\n\r\n/* Wrapper (container align to right) */\r\n.top-progress-wrapper {\r\n  width: 50%;\r\n  height: 14px;\r\n  background: #d9d9d9;\r\n  border-radius: 20px;\r\n  overflow: hidden;\r\n  margin: 20px 0;\r\n\r\n  /* ADD THIS */\r\n  margin-left: 20%;   /* pushes to right */\r\n  display: flex;\r\n  align-items: center; /* vertical center */\r\n}\r\n\r\n",
+                    "styleUrl": "./tables.component1.css"
                 }
             ],
             "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 84
+            },
             "extends": [],
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "TablesComponent-1",
-            "templateData": "<div class=\"page-wrapper\">\r\n\r\n  <!-- CARD CONTAINER -->\r\n  <div class=\"card-container\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header-wrapper\">\r\n\r\n      <div class=\"tabs\">\r\n        <div\r\n          class=\"tab\"\r\n          [class.active]=\"activeTab === 'progress'\"\r\n          (click)=\"activeTab = 'progress'\">\r\n          In Progress (5)\r\n        </div>\r\n\r\n        <div\r\n          class=\"tab\"\r\n          [class.active]=\"activeTab === 'submitted'\"\r\n          (click)=\"activeTab = 'submitted'\">\r\n          Submitted (3)\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"actions\">\r\n        <div class=\"action\" (click)=\"showFilters = !showFilters\">\r\n          <mat-icon>filter_list</mat-icon>\r\n          <span>Show filters</span>\r\n        </div>\r\n\r\n        <div class=\"action\">\r\n          <mat-icon>view_column</mat-icon>\r\n          <span>Columns</span>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"divider\"></div>\r\n\r\n    <!-- TABLE -->\r\n    <div class=\"table-wrapper\">\r\n\r\n      <table mat-table [dataSource]=\"dataSource\" class=\"custom-table\">\r\n\r\n        <!-- REF -->\r\n        <ng-container matColumnDef=\"ref\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            International <br> Reference Number\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\" class=\"link\">\r\n            {{row.ref}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- APPLICATION -->\r\n        <ng-container matColumnDef=\"application\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            Application data for\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.application}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- MODIFIED -->\r\n        <ng-container matColumnDef=\"modified\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            Modified on\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.modified}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- CROP -->\r\n        <ng-container matColumnDef=\"crop\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            Crop\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.crop}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- DENOMINATION -->\r\n        <ng-container matColumnDef=\"denomination\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            Proposed variety denomination\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.denomination}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- BREEDER -->\r\n        <ng-container matColumnDef=\"breeder\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            Breeder/Submitter reference\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.breeder}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- ACTIONS -->\r\n        <ng-container matColumnDef=\"actions\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"actions-header\">\r\n            Actions\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\" class=\"actions-cell\">\r\n            <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n              <mat-icon>more_horiz</mat-icon>\r\n            </button>\r\n          </td>\r\n        </ng-container>\r\n\r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n\r\n      </table>\r\n\r\n      <!-- GREEN PROGRESS BAR -->\r\n      <mat-progress-bar\r\n        mode=\"determinate\"\r\n        value=\"55\"\r\n        class=\"bottom-progress\">\r\n      </mat-progress-bar>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n<!-- MENU -->\r\n<mat-menu #menu=\"matMenu\">\r\n  <button mat-menu-item>Edit</button>\r\n  <button mat-menu-item>Delete</button>\r\n</mat-menu>\r\n\r\n<div class=\"page-wrapper\">\r\n\r\n  <div class=\"card-container\">\r\n\r\n    <!-- HEADER -->\r\n    <div class=\"header-wrapper\">\r\n\r\n      <div class=\"tabs\">\r\n        <div\r\n          class=\"tab\"\r\n          [class.active]=\"activeTab === 'progress'\"\r\n          (click)=\"activeTab = 'progress'\">\r\n          In Progress (5)\r\n        </div>\r\n\r\n        <div\r\n          class=\"tab\"\r\n          [class.active]=\"activeTab === 'submitted'\"\r\n          (click)=\"activeTab = 'submitted'\">\r\n          Submitted (3)\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"actions-top\">\r\n        <div class=\"action\" (click)=\"showFilters = !showFilters\">\r\n          <mat-icon>filter_list</mat-icon>\r\n          <span>{{ showFilters ? 'Hide filters' : 'Show filters' }}</span>\r\n        </div>\r\n\r\n        <div class=\"action\">\r\n          <mat-icon>view_column</mat-icon>\r\n          <span>Columns</span>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"divider\"></div>\r\n\r\n    <!-- TABLE -->\r\n    <div class=\"table-wrapper\">\r\n\r\n      <table mat-table [dataSource]=\"dataSource\" class=\"custom-table\">\r\n\r\n        <!-- REF -->\r\n        <ng-container matColumnDef=\"ref\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"header-cell\">\r\n            <div class=\"header-title\">International Reference Number</div>\r\n            <div *ngIf=\"showFilters\" class=\"filter-wrapper\">\r\n              <input class=\"filter-input\" placeholder=\"International Reference...\" />\r\n            </div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\" class=\"link\">\r\n            {{row.ref}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- APPLICATION -->\r\n        <ng-container matColumnDef=\"application\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"header-cell\">\r\n            <div class=\"header-title\">Application data for</div>\r\n            <div *ngIf=\"showFilters\" class=\"filter-wrapper\">\r\n              <input class=\"filter-input\" placeholder=\"Application data for\" />\r\n            </div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.application}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- MODIFIED -->\r\n        <ng-container matColumnDef=\"modified\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"header-cell\">\r\n            <div class=\"header-title\">Modified on</div>\r\n            <div *ngIf=\"showFilters\" class=\"filter-wrapper date-wrapper\">\r\n              <input class=\"filter-input\" placeholder=\"Modified...\" />\r\n              <mat-icon class=\"calendar-icon\">calendar_today</mat-icon>\r\n            </div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.modified}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- CROP -->\r\n        <ng-container matColumnDef=\"crop\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"header-cell\">\r\n            <div class=\"header-title\">Crop</div>\r\n            <div *ngIf=\"showFilters\" class=\"filter-wrapper\">\r\n              <input class=\"filter-input\" placeholder=\"Crop\" />\r\n            </div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.crop}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- DENOMINATION -->\r\n        <ng-container matColumnDef=\"denomination\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"header-cell\">\r\n            <div class=\"header-title\">Proposed variety denomination</div>\r\n            <div *ngIf=\"showFilters\" class=\"filter-wrapper\">\r\n              <input class=\"filter-input\" placeholder=\"Proposed variety...\" />\r\n            </div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.denomination}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- BREEDER -->\r\n        <ng-container matColumnDef=\"breeder\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"header-cell\">\r\n            <div class=\"header-title\">Breeder/Submitter reference</div>\r\n            <div *ngIf=\"showFilters\" class=\"filter-wrapper\">\r\n              <input class=\"filter-input\" placeholder=\"Breeder/Submitter...\" />\r\n            </div>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            {{row.breeder}}\r\n          </td>\r\n        </ng-container>\r\n\r\n        <!-- ACTIONS -->\r\n        <ng-container matColumnDef=\"actions\">\r\n          <th mat-header-cell *matHeaderCellDef class=\"actions-header sticky-col\">\r\n            Actions\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\" class=\"actions-cell sticky-col\">\r\n            <button mat-icon-button>\r\n              <mat-icon>more_horiz</mat-icon>\r\n            </button>\r\n          </td>\r\n        </ng-container>\r\n\r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n\r\n      </table>\r\n\r\n      <mat-progress-bar mode=\"determinate\" value=\"55\" class=\"bottom-progress\">\r\n      </mat-progress-bar>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n<div class=\"preview-page\">\r\n\r\n  <div class=\"preview-card\">\r\n\r\n    <div class=\"preview-label\">\r\n      <span class=\"preview-icon\">▣</span>\r\n      PREVIEW\r\n    </div>\r\n\r\n    <h3 class=\"preview-title\">List of Characteristics (4)</h3>\r\n\r\n    <div class=\"table-wrapper\">\r\n\r\n      <table class=\"character-table\">\r\n\r\n        <thead>\r\n          <tr>\r\n            <th class=\"col-move\"></th>\r\n            <th class=\"col-no\"></th>\r\n            <th class=\"col-type\">English</th>\r\n            <th class=\"col-example\">Example Varieties</th>\r\n            <th class=\"col-notes\">Notes</th>\r\n            <th class=\"col-delete\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n\r\n        <tbody>\r\n\r\n          <!-- SECTION 1 -->\r\n          <tr class=\"section-head\">\r\n            <td class=\"col-move\">↕</td>\r\n            <td class=\"col-no\">1</td>\r\n            <td><b>QN</b>&nbsp;&nbsp;MG/VG</td>\r\n            <td></td>\r\n            <td></td>\r\n            <td class=\"col-delete\">🗑</td>\r\n          </tr>\r\n\r\n          <tr class=\"section-body\">\r\n            <td></td><td></td>\r\n            <td>\r\n              <div class=\"group-title\">Tree: vigor</div>\r\n              <div>very weak</div>\r\n              <div>very weak to weak</div>\r\n              <div>weak</div>\r\n              <div>weak to medium</div>\r\n              <div>medium</div>\r\n              <div>medium to strong</div>\r\n              <div>strong</div>\r\n              <div>strong to very strong</div>\r\n              <div>very strong</div>\r\n            </td>\r\n            <td>\r\n              <div>&nbsp;</div>\r\n              <div>Grenadier, Nield's Drooper</div>\r\n              <div>James Grieve, Redkan</div>\r\n              <div>Alkmene, Regine</div>\r\n              <div>Piros, Pomforyou, Renora</div>\r\n              <div>Gala, Pinova, Trajan</div>\r\n              <div>Dalili, Pia, Pivita</div>\r\n              <div>Elstar, Rafzubin, Santana</div>\r\n              <div>Bay 3484, Collina, Cripps Pink</div>\r\n              <div>Gloster, Ingrid Marie</div>\r\n            </td>\r\n            <td class=\"notes\">\r\n              <div>&nbsp;</div>\r\n              <div>1</div><div>2</div><div>3</div><div>4</div>\r\n              <div>5</div><div>6</div><div>7</div>\r\n              <div>8</div><div>9</div>\r\n            </td>\r\n            <td></td>\r\n          </tr>\r\n\r\n          <!-- SECTION 2 -->\r\n          <tr class=\"section-head\">\r\n            <td class=\"col-move\">↕</td>\r\n            <td class=\"col-no\">2 (*)</td>\r\n            <td><b>QL</b>&nbsp;&nbsp;VG</td>\r\n            <td></td>\r\n            <td></td>\r\n            <td class=\"col-delete\">🗑</td>\r\n          </tr>\r\n\r\n          <tr class=\"section-body\">\r\n            <td></td><td></td>\r\n            <td>\r\n              <div class=\"group-title\">Tree: type</div>\r\n              <div>columnar</div>\r\n              <div>ramified</div>\r\n            </td>\r\n            <td>\r\n              <div>&nbsp;</div>\r\n              <div>MacExcel, Wijcik</div>\r\n              <div>Elstar, Golden Delicious</div>\r\n            </td>\r\n            <td class=\"notes\">\r\n              <div>&nbsp;</div>\r\n              <div>1</div>\r\n              <div>2</div>\r\n            </td>\r\n            <td></td>\r\n          </tr>\r\n\r\n          <!-- SECTION 3 -->\r\n          <tr class=\"section-head\">\r\n            <td class=\"col-move\">↕</td>\r\n            <td class=\"col-no\">3 (*)</td>\r\n            <td><b>QN</b>&nbsp;&nbsp;MG/VG</td>\r\n            <td></td>\r\n            <td></td>\r\n            <td class=\"col-delete\">🗑</td>\r\n          </tr>\r\n\r\n          <tr class=\"section-body\">\r\n            <td></td><td></td>\r\n            <td>\r\n              <div class=\"group-title\">Leaf: length</div>\r\n              <div>very shortstszrtz</div>\r\n              <div>medium</div>\r\n              <div>5</div>\r\n            </td>\r\n            <td>\r\n              <div>&nbsp;</div>\r\n              <div>Kasumi</div>\r\n              <div></div>\r\n              <div>variety B</div>\r\n            </td>\r\n            <td class=\"notes\">\r\n              <div>&nbsp;</div>\r\n              <div>1</div>\r\n              <div>2</div>\r\n              <div>3</div>\r\n            </td>\r\n            <td></td>\r\n          </tr>\r\n\r\n          <!-- SECTION 4 -->\r\n          <tr class=\"section-head\">\r\n            <td class=\"col-move\">↕</td>\r\n            <td class=\"col-no\">4</td>\r\n            <td><b>QL</b>&nbsp;&nbsp;MS</td>\r\n            <td></td>\r\n            <td></td>\r\n            <td class=\"col-delete\">🗑</td>\r\n          </tr>\r\n\r\n          <tr class=\"section-body\">\r\n            <td></td><td></td>\r\n            <td>\r\n              <div class=\"group-title\">resistance test</div>\r\n              <div>absent</div>\r\n              <div>present</div>\r\n            </td>\r\n            <td>\r\n              <div>&nbsp;</div>\r\n              <div></div>\r\n              <div></div>\r\n            </td>\r\n            <td class=\"notes\">\r\n              <div>&nbsp;</div>\r\n              <div>1</div>\r\n              <div>9</div>\r\n            </td>\r\n            <td></td>\r\n          </tr>\r\n\r\n        </tbody>\r\n\r\n      </table>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</div>\r\n"
-        },
-        {
-            "name": "TabsHeaderComponent",
-            "id": "component-TabsHeaderComponent-8d3113b2fb26163c9c8532f1386da3d6782294bff5f02aec117bd7bf36537cea45bbe6c34d13ce03dc68a09e7d798740bd12e3d2f07d9652caeccf617c08c64d",
-            "file": "src/stories/tabs-header.component/tabs-header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-tabs-header",
-            "styleUrls": [
-                "./tabs-header.component.css"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./tabs-header.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "active",
-                    "defaultValue": "'progress'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "\"progress\" | \"submitted\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "tabChange",
-                    "defaultValue": "new EventEmitter<'progress' | 'submitted'>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "selectTab",
-                    "args": [
-                        {
-                            "name": "tab",
-                            "type": "\"progress\" | \"submitted\"",
-                            "optional": false,
-                            "dotDotDotToken": false,
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "tab",
-                            "type": "\"progress\" | \"submitted\"",
-                            "optional": false,
-                            "dotDotDotToken": false,
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-tabs-header',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './tabs-header.component.html',\r\n  styleUrls: ['./tabs-header.component.css']\r\n})\r\nexport class TabsHeaderComponent {\r\n\r\n  @Input() active: 'progress' | 'submitted' = 'progress';\r\n  @Output() tabChange = new EventEmitter<'progress' | 'submitted'>();\r\n\r\n  selectTab(tab: 'progress' | 'submitted') {\r\n    this.active = tab;\r\n    this.tabChange.emit(tab);\r\n  }\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".tabs-wrapper {\r\n  display: flex;\r\n  gap: 28px;\r\n  font-size: 16px;\r\n  font-weight: 500;\r\n  border-bottom: 1px solid #e0e0e0;\r\n}\r\n\r\n.tab {\r\n  position: relative;\r\n  padding: 12px 0;\r\n  cursor: pointer;\r\n  color: #444;\r\n  transition: color 0.2s ease;\r\n}\r\n\r\n.tab:hover {\r\n  color: #184d3c;\r\n}\r\n\r\n.tab.active {\r\n  color: #184d3c;\r\n}\r\n\r\n.tab.active::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -1px;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 3px;\r\n  background: #184d3c;\r\n  border-radius: 2px;\r\n}\r\n",
-                    "styleUrl": "./tabs-header.component.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<div class=\"tabs-wrapper\">\r\n\r\n  <div\r\n    class=\"tab\"\r\n    [class.active]=\"active === 'progress'\"\r\n    (click)=\"selectTab('progress')\">\r\n    In Progress\r\n  </div>\r\n\r\n  <div\r\n    class=\"tab\"\r\n    [class.active]=\"active === 'submitted'\"\r\n    (click)=\"selectTab('submitted')\">\r\n    Submitted\r\n  </div>\r\n\r\n</div>\r\n"
+            "templateData": "<div class=\"container\">\r\n\r\n<!-- TOP HEADER -->\r\n<div class=\"top-header\">\r\n\r\n  <!-- LEFT SIDE TABS -->\r\n  <mat-tab-group\r\n    mat-stretch-tabs=\"false\"\r\n    animationDuration=\"0ms\"\r\n    class=\"custom-tabs\">\r\n\r\n    <mat-tab label=\"In Progress (5)\"></mat-tab>\r\n    <mat-tab label=\"Submitted (3)\"></mat-tab>\r\n\r\n  </mat-tab-group>\r\n\r\n  <!-- RIGHT SIDE ACTIONS -->\r\n  <div class=\"top-actions\">\r\n\r\n    <button mat-button class=\"action-btn\" style=\"color:  #1C4240;\">\r\n      <mat-icon>filter_list</mat-icon>\r\n      Show filters\r\n    </button>\r\n\r\n    <button mat-button class=\"action-btn\" style=\"color:  #1C4240;\">\r\n      <mat-icon>view_column</mat-icon>\r\n      Columns\r\n    </button>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n  <!-- TABLE -->\r\n  <table mat-table [dataSource]=\"dataSource\" class=\"custom-table\">\r\n\r\n    <!-- Reference -->\r\n    <ng-container matColumnDef=\"ref\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        International <br> Reference Number\r\n\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"ref-link\">\r\n        {{element.ref}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Application -->\r\n    <ng-container matColumnDef=\"application\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Application data for\r\n\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.application}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Modified -->\r\n    <ng-container matColumnDef=\"modified\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Modified on\r\n\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.modified}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Crop -->\r\n    <ng-container matColumnDef=\"crop\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Crop\r\n\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.crop}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Denomination -->\r\n    <ng-container matColumnDef=\"denomination\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Proposed variety  <br>denomination\r\n\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.denomination}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Breeder -->\r\n    <ng-container matColumnDef=\"breeder\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Breeder/Submitter <br> reference\r\n\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.breeder}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions -->\r\n    <ng-container matColumnDef=\"actions\">\r\n      <th mat-header-cell *matHeaderCellDef>Actions</th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        <button mat-icon-button>\r\n          <mat-icon>more_horiz</mat-icon>\r\n        </button>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n \r\n\r\n\r\n  </table>\r\n     <div class=\"top-progress-wrapper\">\r\n  <div class=\"top-progress-bar\"></div>\r\n</div>\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"container\">\r\n\r\n<!-- TOP HEADER -->\r\n<div class=\"top-header\">\r\n\r\n  <!-- LEFT SIDE TABS -->\r\n  <mat-tab-group\r\n    mat-stretch-tabs=\"false\"\r\n    animationDuration=\"0ms\"\r\n    class=\"custom-tabs\">\r\n\r\n    <mat-tab label=\"In Progress (5)\"></mat-tab>\r\n    <mat-tab label=\"Submitted (3)\"></mat-tab>\r\n\r\n  </mat-tab-group>\r\n\r\n  <!-- RIGHT SIDE ACTIONS -->\r\n  <div class=\"top-actions\">\r\n\r\n    <button mat-button class=\"action-btn\" style=\"color:  #1C4240;\">\r\n      <mat-icon>filter_list</mat-icon>\r\n      Hide filters\r\n    </button>\r\n\r\n    <button mat-button class=\"action-btn\" style=\"color:  #1C4240;\">\r\n      <mat-icon>view_column</mat-icon>\r\n      Columns\r\n    </button>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n  <!-- TABLE -->\r\n  <table mat-table [dataSource]=\"dataSource\" class=\"custom-table\">\r\n\r\n    <!-- Reference -->\r\n    <ng-container matColumnDef=\"ref\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        International <br> Reference Number\r\n        <input matInput class=\"filter-input\"\r\n          [(ngModel)]=\"filterValues.ref\"\r\n          (keyup)=\"applyFilter()\"\r\n          placeholder=\"International Reference\">\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"ref-link\">\r\n        {{element.ref}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Application -->\r\n    <ng-container matColumnDef=\"application\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Application data for\r\n        <input matInput class=\"filter-input\"\r\n          [(ngModel)]=\"filterValues.application\"\r\n          (keyup)=\"applyFilter()\"\r\n          placeholder=\"Application data for\">\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.application}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Modified -->\r\n    <ng-container matColumnDef=\"modified\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Modified on\r\n        <input matInput class=\"filter-input\"\r\n          [(ngModel)]=\"filterValues.modified\"\r\n          (keyup)=\"applyFilter()\"\r\n          placeholder=\"Modified on\">\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.modified}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Crop -->\r\n    <ng-container matColumnDef=\"crop\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Crop\r\n        <input matInput class=\"filter-input\"\r\n          [(ngModel)]=\"filterValues.crop\"\r\n          (keyup)=\"applyFilter()\"\r\n          placeholder=\"Crop\">\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.crop}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Denomination -->\r\n    <ng-container matColumnDef=\"denomination\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Proposed variety denomination\r\n        <input matInput class=\"filter-input\"\r\n          [(ngModel)]=\"filterValues.denomination\"\r\n          (keyup)=\"applyFilter()\"\r\n          placeholder=\"Proposed variety...\">\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.denomination}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Breeder -->\r\n    <ng-container matColumnDef=\"breeder\">\r\n      <th mat-header-cell *matHeaderCellDef>\r\n        Breeder/Submitter reference\r\n        <input matInput class=\"filter-input\"\r\n          [(ngModel)]=\"filterValues.breeder\"\r\n          (keyup)=\"applyFilter()\"\r\n          placeholder=\"Breeder/Submitter re...\">\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        {{element.breeder}}\r\n      </td>\r\n    </ng-container>\r\n\r\n    <!-- Actions -->\r\n    <ng-container matColumnDef=\"actions\">\r\n      <th mat-header-cell *matHeaderCellDef>Actions</th>\r\n      <td mat-cell *matCellDef=\"let element\">\r\n        <button mat-icon-button>\r\n          <mat-icon>more_horiz</mat-icon>\r\n        </button>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    <div class=\"top-progress-wrapper\">\r\n  <div class=\"top-progress-bar\"></div>\r\n</div>\r\n\r\n\r\n  </table>\r\n\r\n   <div class=\"top-progress-wrapper\">\r\n  <div class=\"top-progress-bar\"></div>\r\n</div>\r\n</div>\r\n\r\n"
         }
     ],
     "modules": [],
@@ -2146,6 +2205,46 @@
                 "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideRouter(routes)\r\n  ]\r\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/panel-stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: () => ({\r\n    template: `<upov-panel></upov-panel>`,\r\n  }),\r\n}"
+            },
+            {
+                "name": "Expanded",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/panel-stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: () => ({\r\n    template: `<upov-panel></upov-panel>`,\r\n    props: {\r\n      panelOpenState: true,\r\n    },\r\n  }),\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/panel-stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Panel>",
+                "defaultValue": "{\r\n  title: 'Components/Panel',\r\n  component: Panel,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [Panel],\r\n    }),\r\n    applicationConfig({\r\n      providers: [],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    docs: {\r\n      description: {\r\n        component: `\r\nExpandable UPOV panel component built using Angular Material Expansion Panel.\r\n\r\n### Features:\r\n- Main Common Name(s)\r\n- UPOV Code(s)\r\n- Submit button\r\n- Expand / Collapse toggle\r\n- Botanical names section\r\n- Related links\r\n- Rich text editor section\r\n- Metadata footer\r\n\r\n## Usage\r\n\r\n\\`\\`\\`typescript\r\nimport { Panel } from 'upov-ui';\r\n\r\n@Component({\r\n  standalone: true,\r\n  imports: [Panel],\r\n  template: \\`\r\n    <upov-panel></upov-panel>\r\n  \\`\r\n})\r\nexport class MyComponent {}\r\n\\`\\`\\`\r\n        `,\r\n      },\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "NarrowContainer",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/panel-stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"max-width: 700px; border: 1px dashed #ccc; padding: 16px;\">\r\n        <upov-panel></upov-panel>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+            },
+            {
                 "name": "routes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2153,11 +2252,23 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Routes",
-                "defaultValue": "[\r\n  {path:'12',component:TablesComponent}\r\n]"
+                "defaultValue": "[\r\n\r\n]"
             }
         ],
         "functions": [],
-        "typealiases": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Panel>",
+                "file": "src/stories/panel-stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            }
+        ],
         "enumerations": [],
         "groupedVariables": {
             "src/app/app.config.ts": [
@@ -2172,6 +2283,48 @@
                     "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideRouter(routes)\r\n  ]\r\n}"
                 }
             ],
+            "src/stories/panel-stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/panel-stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: () => ({\r\n    template: `<upov-panel></upov-panel>`,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Expanded",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/panel-stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: () => ({\r\n    template: `<upov-panel></upov-panel>`,\r\n    props: {\r\n      panelOpenState: true,\r\n    },\r\n  }),\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/panel-stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Panel>",
+                    "defaultValue": "{\r\n  title: 'Components/Panel',\r\n  component: Panel,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [Panel],\r\n    }),\r\n    applicationConfig({\r\n      providers: [],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    docs: {\r\n      description: {\r\n        component: `\r\nExpandable UPOV panel component built using Angular Material Expansion Panel.\r\n\r\n### Features:\r\n- Main Common Name(s)\r\n- UPOV Code(s)\r\n- Submit button\r\n- Expand / Collapse toggle\r\n- Botanical names section\r\n- Related links\r\n- Rich text editor section\r\n- Metadata footer\r\n\r\n## Usage\r\n\r\n\\`\\`\\`typescript\r\nimport { Panel } from 'upov-ui';\r\n\r\n@Component({\r\n  standalone: true,\r\n  imports: [Panel],\r\n  template: \\`\r\n    <upov-panel></upov-panel>\r\n  \\`\r\n})\r\nexport class MyComponent {}\r\n\\`\\`\\`\r\n        `,\r\n      },\r\n    },\r\n  },\r\n}"
+                },
+                {
+                    "name": "NarrowContainer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/panel-stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"max-width: 700px; border: 1px dashed #ccc; padding: 16px;\">\r\n        <upov-panel></upov-panel>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                }
+            ],
             "src/app/app.routes.ts": [
                 {
                     "name": "routes",
@@ -2181,28 +2334,35 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Routes",
-                    "defaultValue": "[\r\n  {path:'12',component:TablesComponent}\r\n]"
+                    "defaultValue": "[\r\n\r\n]"
                 }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
-        "groupedTypeAliases": {}
+        "groupedTypeAliases": {
+            "src/stories/panel-stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Panel>",
+                    "file": "src/stories/panel-stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ]
+        }
     },
     "routes": {
         "name": "<root>",
         "kind": "module",
-        "children": [
-            {
-                "name": "TablesComponent",
-                "kind": "component",
-                "path": "12",
-                "filename": "src/app/app.routes.ts"
-            }
-        ]
+        "children": []
     },
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -2235,48 +2395,66 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/pages 1/components/components.ts",
+                "filePath": "src/app/cards/auth-card/auth-card.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "Components",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/pages 1/components/components.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "ApplicationData",
+                "name": "AuthCard",
                 "coveragePercent": 0,
                 "coverageCount": "0/7",
                 "status": "low"
             },
             {
-                "filePath": "src/app/pages 1/components2/components2.ts",
+                "filePath": "src/app/cards/card2/card2.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "Components2",
+                "name": "Card2",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/cards/country.component/country.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CountryComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
                 "status": "low"
             },
             {
-                "filePath": "src/app/pages 1/tables.component/tables.component.ts",
+                "filePath": "src/app/cards/panel/panel.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "TablesComponent",
+                "name": "Panel",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
-                "filePath": "src/app/pages 1/tables.component/tables.component.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "TableRow",
+                "filePath": "src/app/pages 1/api/api.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Api",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages 1/app1/app1.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "App1",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages 1/tables.component1/tables.component1.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TablesComponent1",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -2370,6 +2548,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/auth-card.component/auth-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AuthCard",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/button.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2379,21 +2566,12 @@
                 "status": "very-good"
             },
             {
-                "filePath": "src/stories/character-preview.component/character-preview.component.ts",
+                "filePath": "src/stories/country-card.component/country-card.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "CharacterPreviewComponent",
+                "name": "CountryCard",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/character-preview.component/character-preview.component.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "CharacterSection",
-                "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -2415,30 +2593,53 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/tables.component/tables.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "TablesComponent",
+                "filePath": "src/stories/panel-stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/tables.component/tables.component.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "TableRow",
+                "filePath": "src/stories/panel-stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Expanded",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/tabs-header.component/tabs-header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "TabsHeaderComponent",
+                "filePath": "src/stories/panel-stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/panel-stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NarrowContainer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/panel-stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

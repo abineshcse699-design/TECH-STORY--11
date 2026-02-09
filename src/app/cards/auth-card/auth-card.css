@@ -1,0 +1,111 @@
+.plant-card {
+  width: 348px;
+  height: 146px;
+  border-radius: 16px;
+  position: relative;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(70, 70, 70, 0.04);
+}
+
+/* Updated Chip */
+.updated-chip {
+    display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2D7D5F !important; /* Dark teal-green */
+  color: #ffffff !important;
+  font-size: 11px;
+  font-weight: 500;
+  height: 22px;
+  /* padding: 0 10px; */
+  border-radius: 6px !important;
+  z-index: 10;
+
+}
+
+/* Layout */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+/* Left */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Category */
+.category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1c4240;
+}
+
+.leaf-icon {
+  font-size: 18px;
+}
+
+/* Botanical Name */
+.botanical-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #1c4240;
+  margin: 0;
+}
+
+/* Details */
+.details {
+  margin-top: 12px;
+}
+
+.primary {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.secondary {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Right Image */
+.right {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* No Image State */
+.no-image {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.updated-chip ::ng-deep .mdc-evolution-chip__text-label {
+  color: #FFFFFF !important;
+}
+
+
+

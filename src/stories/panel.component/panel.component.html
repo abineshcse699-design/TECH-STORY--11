@@ -1,0 +1,103 @@
+<div class="panel-wrapper">
+  <mat-expansion-panel
+    class="custom-panel"
+    [expanded]="panelOpenState"
+    hideToggle="true"
+  >
+    <!-- HEADER -->
+    <mat-expansion-panel-header class="custom-header">
+
+      <div class="main-info-row">
+
+        <div class="info-group">
+          <span class="label-text">Main Common Name(s):</span>
+          <div class="value-text">European Pear</div>
+        </div>
+
+        <div class="info-group">
+          <span class="label-text">UPOV Code(s):</span>
+          <div class="value-text">
+            PYRUS_COM; PYRUS_BCO; PYRUS_CPB; PYRUS_CUS
+          </div>
+        </div>
+
+        <button mat-flat-button class="submit-btn">
+          <mat-icon>check_circle</mat-icon>
+          Submit
+        </button>
+
+      </div>
+
+    </mat-expansion-panel-header>
+
+    <!-- EXPANDED CONTENT -->
+    <div class="expanded-content">
+
+      <!-- Botanical Section -->
+      <div class="content-section">
+        <span class="label-text botanical-label">
+          Botanical Name(s):
+        </span>
+
+        <p class="botanical-text">
+          Pyrus communis L., Pyrus asiae-mediae (Popov) Maleev,
+          Pyrus balansae Decne., Pyrus bourgaeana Decne.,
+          Pyrus domestica Medik., Pyrus elata Rubtzov,
+          Pyrus medvedevii Rubtzov,
+          Pyrus × bretschneideri Rehder × Pyrus communis L.,
+          Pyrus communis × Pyrus pyrifolia × Pyrus × bretschneideri,
+          Pyrus communis L. × P. ussuriensis Maxim. & Rupr.
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="links-section">
+        <span class="label-text small-label">Related links:</span>
+
+        <a class="external-link">
+          Quantity of plant material required (GN7)
+          <mat-icon>open_in_new</mat-icon>
+        </a>
+
+        <a class="external-link">
+          Quantity of plant material required (GN6)
+          <mat-icon>open_in_new</mat-icon>
+        </a>
+      </div>
+
+      <!-- Rich Text Editor -->
+      <div class="input-section">
+        <label class="label-text">
+          Please indicate other associated UPOV documents:
+        </label>
+
+        <div class="rich-text-editor">
+          <div class="editor-toolbar">
+            <mat-icon>help_outline</mat-icon>
+            <mat-icon>format_list_bulleted</mat-icon>
+            <mat-icon>code</mat-icon>
+            <mat-icon>link</mat-icon>
+            <mat-icon>image</mat-icon>
+          </div>
+
+          <textarea placeholder="Add explanation here"></textarea>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-section">
+        <div class="meta-left">
+          <span class="details-link">Less details</span>
+        </div>
+
+        <div class="meta-right">
+          <span class="tg-code">TG/export_test_2</span><br>
+          <span class="save-date">
+            Saved: 02 Dec, 2025 - 31 Dec, 2025
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </mat-expansion-panel>
+</div>
