@@ -6,12 +6,12 @@ import { ValueTextComponent} from '../../value-text.component/value-text.compone
 @Component({
   selector: 'upov-info-group',
   standalone: true,
-  imports: [CommonModule, LabelComponent,ValueTextComponent],
+  imports: [CommonModule],
   templateUrl: './upov-info-group.component.html',
   styleUrls: ['./upov-info-group.component.css']
 })
 export class UpovInfoGroup {
-  
+
   @Input() label!: string;
   @Input() value!: string;
 

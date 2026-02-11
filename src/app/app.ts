@@ -22,7 +22,7 @@ import { CountryComponent2 } from "./cards/upov-country2/upov-country2";
 @Component({
 
   selector: 'app-root',
-  imports: [RouterOutlet, Header, ActionButtonsComponent, AuthCard, CountryComponent, Panel, Card2, Tab, Tab2, Card3, CountryCard, CountryComponent2],
+  imports: [ Tab2, Card3,Card2 ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 
