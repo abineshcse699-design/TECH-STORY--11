@@ -1,0 +1,7 @@
+.drag-icon {
+  color: #666;
+  font-size: 18px;
+  cursor: move;
+  display: flex;
+  margin-right: 20px;
+}

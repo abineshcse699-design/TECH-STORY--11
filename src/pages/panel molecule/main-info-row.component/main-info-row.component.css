@@ -1,0 +1,10 @@
+.main-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+}
+
+.button-area {
+  margin-left: auto;
+}

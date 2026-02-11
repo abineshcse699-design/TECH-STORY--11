@@ -1,104 +1,177 @@
-/* Container Spacing */
-.compact-view {
-  background-color: #f5f7f7;
-  padding: 0 10px;
-  width: 90%;
-}
 
-/* 1. Reduce Tab Height and Gaps */
+/* Container for the whole top section */
 .header-toolbar {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end; /* Aligns buttons with tab baseline */
-  border-bottom: 1px solid #d0d0d0;
-}
-
-::ng-deep .narrow-tabs .mat-mdc-tab {
-  height: 40px !important; /* Shorter tabs */
-  min-width: 100px !important;
-  padding: 0 12px !important;
-}
-
-::ng-deep .narrow-tabs .mdc-tab__text-label {
-  font-size: 13px;
-  color: #4a5a5a;
-}
-
-/* 2. Toolbar Actions Alignment */
-.toolbar-actions {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.text-link {
-  font-size: 13px !important;
-  color: #2d5a27 !important;
-  font-weight: 600 !important;
-  text-decoration: underline;
-}
-
-/* 3. The CRT Table: Ultra Compact */
-.table-container {
-  overflow-x: auto;
+  justify-content: space-between; /* Pushes tabs to left, actions to right */
+  align-items: flex-end; /* Aligns text to the bottom line */
+  border-bottom: 1px solid #c5d1d1; /* The light gray horizontal line */
+  background-color: #f8f9f9;
+  padding: 0 5px;
   width: 100%;
-  border: 1px solid #e0e0e0;
 }
 
-.crt-table {
-  width: 80%;
-
+/* --- Left Side: Tabs --- */
+.tabs-side {
+  display: flex;
+  gap: 5px; /* Tight gap between tabs */
 }
 
-/* Force Row Height Down */
-::ng-deep .crt-table .mat-mdc-header-row {
-  height: 36px !important;
+.tab {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5d6d6e; /* Gray color for inactive tabs */
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-::ng-deep .crt-table .mat-mdc-row {
-  height: 32px !important; /* Very tight spacing */
+.tab.active {
+  color: #2d5a27; /* Dark green for active tab */
+  border-bottom: 3px solid #2d5a27; /* The thick green active line */
+  margin-bottom: -1px; /* Overlaps the gray border perfectly */
 }
 
-/* Cell Padding Reduction */
-.mat-mdc-header-cell, .mat-mdc-cell {
-  padding: 4px 10px !important; /* Tight lateral gaps */
-  font-size: 12.5px !important;
-  border-right: 1px solid #f0f0f0; /* Sublte vertical separator */
+/* --- Right Side: Actions (Filter & Columns) --- */
+.actions-side {
+  display: flex;
+  gap: 20px; /* Gap between "Show filters" and "Columns" */
+  padding-bottom: 10px; /* Space above the divider line */
 }
 
-/* 4. ID Link with Green Underline */
-.id-cell {
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Gap between the icon and the text */
+  cursor: pointer;
+}
+
+.header-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: #4a5a5a; /* Gray color for icons */
+}
+
+.link-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d5a27; /* Dark green text */
+  text-decoration: underline; /* The underline as seen in the image */
+  text-underline-offset: 3px;
+}
+
+/* Hover effect for better UX */
+.toolbar-item:hover .link-text {
+  color: #1b3d18;
+}
+
+
+
+
+
+/* --- HEADER ALIGNMENT & GAP --- */
+.header-content.center-gap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This creates the wide gap between text and icon */
+  width: 100%;
+  white-space: pre-line;
+  height: 55px;
+  line-height: 1.2;
+}
+
+.sort-icon-custom {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #9eb1b1; /* Matches the light gray sort icons in image_4eb854 */
+  margin-left: 10px;
+}
+
+/* --- VERTICAL CENTER LINE --- */
+.first-column-line {
+  border-right: 1px solid #e0e0e0 !important; /* The line between Col 1 and Col 2 */
+  padding-right: 12px !important;
+}
+
+/* --- TABLE STYLING --- */
+.perfect-crt-table {
+  width: 100%;
+  background: white;
+}
+
+.mat-mdc-header-cell {
+  background-color: white !important;
+  color: #333 !important;
+  font-weight: 700 !important;
+  padding: 0 10px !important;
+}
+
+.mat-mdc-cell {
+  padding: 0 10px !important;
+  font-size: 13px;
+}
+
+/* --- ACTIONS STICKY SHADOW --- */
+.sticky-action-cell {
+  background-color: white !important;
+  border-left: 1px solid #eee !important;
+  box-shadow: -8px 0 12px -10px rgba(0,0,0,0.4) !important; /* Floating shadow line */
+  text-align: center;
+}
+
+/* --- VISUAL DETAILS --- */
+.id-cell-styled {
   color: #2d5a27;
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: #98b594;
+  text-decoration-color: #c0d1bf; /* Light green underline from image_4ece80 */
 }
 
-.botanical { font-style: italic; }
+.botanical-text { font-style: italic; }
+.crop-col-width { min-width: 320px !important; }
+.action-dots { color: #2d5a27; cursor: pointer; }
 
-/* 5. Sticky Action Column with BOX SHADOW */
-.sticky-action {
-  background-color: white !important;
-  text-align: center;
-  width: 50px;
-  border-left: 1px solid #ddd !important;
-  /* Shadow mimic from image_4c8d02.png */
-  box-shadow: -6px 0 10px -8px rgba(0,0,0,0.3) !important;
+/* Density Controls */
+::ng-deep .perfect-crt-table .mat-mdc-header-row { height: 60px !important; }
+::ng-deep .perfect-crt-table .mat-mdc-row { height: 38px !important; }
+/* 1. Base style for all filter inputs */
+.custom-filter-input {
+  height: 32px;
+  border: 1px solid #bccaca;
+  border-radius: 4px;
+  padding: 0 8px;
+  font-size: 12px;
+  background-color: white;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  outline: none;
+
+  /* Default width for most inputs */
+  width: 180px;
 }
 
-.small-icon {
-  width: 30px !important;
-  height: 30px !important;
-  display: flex;
+/* 2. Specific smaller width for Denomination and Reference (as seen in image) */
+.small-filter .custom-filter-input {
+  width: 140px !important;
+}
+
+/* 3. Specific width for the International Reference (First column) */
+.filter-cell[class*="id-filter"] .custom-filter-input {
+    width: 150px;
+}
+
+/* 4. Modified/Date column usually needs a specific width for the icon */
+.filter-cell[class*="modified-filter"] .custom-filter-input {
+    width: 110px;
+}
+
+/* 5. Ensure the cell itself doesn't shrink, just the input inside it */
+.filter-cell {
+  padding: 5px 10px 15px 10px !important;
+  text-align: left; /* Keeps input to the left of the cell */
+}
+
+.filter-input-wrapper {
+  display: inline-flex; /* Prevents the wrapper from stretching 100% */
   align-items: center;
-  justify-content: center;
-  color: #2d5a27;
-}
-
-.sort-icon {
-  font-size: 14px;
-  width: 14px;
-  height: 14px;
-  margin-left: 4px;
-  color: #999;
 }

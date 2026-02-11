@@ -1,0 +1,13 @@
+.submit-btn {
+  background-color: #163A30 !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 0 16px !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.submit-btn mat-icon {
+  color: #E0F048 !important;
+}

@@ -1,0 +1,14 @@
+.links-section {
+  padding: 0 24px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.external-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #163a30;
+  text-decoration: underline;
+  text-decoration-color: #d4e157;
+}

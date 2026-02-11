@@ -1,0 +1,27 @@
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.header-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: #4a5a5a;
+}
+
+.link-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f3d3d;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #d4e157;
+  text-underline-offset: 3px;
+}
+
+.toolbar-item:hover .link-text {
+  color: #1b3d18;
+}

@@ -1,0 +1,7 @@
+.delete-icon {
+  color: #aaa;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  margin-left: 10px;
+}

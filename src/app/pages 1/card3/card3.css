@@ -1,0 +1,132 @@
+/* Container and Background */
+.page-background {
+  background-color: #f4f3ef; /* Light beige from image */
+  padding: 40px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Constrain to 70% and center */
+.card-container {
+
+  /* padding: 20px; */
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  width: 880px; /* <--- YOUR REQUESTED WIDTH */
+  margin-right: 20%;
+  height: 760px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.preview-header {
+  color: #c57e4e; /* Brown-orange text */
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Table Alignment */
+.characteristic-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* padding: 10px; */
+ /* Keep columns locked in place */
+}
+
+/* Master Column Percentages */
+.col-drag      { width: 5%; text-align: center; }
+.col-id        { width: 8%; }
+.col-english   { width: 32%; }
+.col-varieties { width: 30%; }
+.col-notes     { width: 18%; text-align: center; }
+.col-delete    { width: 10%;  }
+
+.mat-mdc-header-cell {
+  font-weight: 700 !important;
+
+  color: black !important;
+  border-bottom: 1px solid #ddd !important;
+  padding: 12px 0 !important;
+  height: 40px;
+  font-size: 14px;
+}
+.col-delete{
+
+  margin-left: 20px;
+}
+/* Main Row Styling */
+.header-data-row td {
+  padding-top: 15px !important;
+  background-color: white !important;
+  border-bottom: none !important;
+}
+
+.type-method-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.type-bold { font-weight: 700; color: #000; width: 35px; }
+.method-light { color: black; font-weight: 700; }
+
+/* Sub-data Alignment Fix */
+.details-cell {
+  padding: 0 0 20px 0 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.details-wrapper {
+  /* Offset to align under 'English' (Drag 5% + ID 8% = 13%) */
+  margin-left: 13%;
+}
+
+.green-title {
+  color: #2d5a27; /* Dark green characteristic title */
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgb(239, 239, 121) ;
+  margin: 10px 0 12px 0;
+  font-size: 15px;
+  display: inline-block;
+}
+
+/* Grid for sub-labels, varieties, and notes */
+.grid-row {
+  display: grid;
+  /* Percentages calculated to line up with headers above */
+  grid-template-columns: 36.5% 40% 17.5%;
+  line-height: 28px;
+  font-size: 14px;
+  color:black;
+  font-weight: 500;
+}
+
+.variety-col { color: #555; }
+.note-col { text-align: center; padding-right: 20px; }
+
+/* Icons */
+.drag-icon { color: #666; font-size: 18px; cursor: move; }
+.delete-icon { color: #aaa; font-size: 22px; cursor: pointer; }
+
+.mat-mdc-cell { padding: 0 !important; }
+.drag-icon{
+  display: flex;
+  margin-right: 20px;
+}
+.delete-icon{
+  display: flex;
+  margin-left: 10px;
+}

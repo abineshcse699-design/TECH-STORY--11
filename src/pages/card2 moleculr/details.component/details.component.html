@@ -1,0 +1,15 @@
+<div class="details-wrapper">
+
+  <upov-characteristic-title
+    [title]="title">
+  </upov-characteristic-title>
+
+  <ng-container *ngFor="let d of details">
+    <upov-detail-row
+      [label]="d.label"
+      [variety]="d.variety"
+      [note]="d.note">
+    </upov-detail-row>
+  </ng-container>
+
+</div>

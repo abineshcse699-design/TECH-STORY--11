@@ -1,53 +1,88 @@
-<div class="compact-view">
+<div class="crt-container">
   <div class="header-toolbar">
-    <mat-tab-group class="narrow-tabs">
-      <mat-tab label="In Progress (5)"></mat-tab>
-      <mat-tab label="Submitted (3)"></mat-tab>
-    </mat-tab-group>
-
-    <div class="toolbar-actions">
-      <button mat-button class="text-link"><mat-icon>filter_list</mat-icon> Show filters</button>
-      <button mat-button class="text-link"><mat-icon>view_column</mat-icon> Columns</button>
+    <div class="tabs-side">
+      <div class="tab active">In Progress (5)</div>
+      <div class="tab">Submitted (3)</div>
+    </div>
+    <div class="actions-side">
+      <div class="toolbar-item">
+        <mat-icon class="header-icon">filter_list</mat-icon>
+        <span class="link-text">Show filters</span>
+      </div>
+      <div class="toolbar-item">
+        <mat-icon class="header-icon">view_column</mat-icon>
+        <span class="link-text">Columns</span>
+      </div>
     </div>
   </div>
 
-  <div class="table-container">
-    <table mat-table [dataSource]="dataSource" class="crt-table">
+  <div class="table-outer-wrapper">
+    <table mat-table [dataSource]="dataSource" class="perfect-crt-table">
 
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> International <br> Reference Number <mat-icon class="sort-icon">import_export</mat-icon> </th>
-        <td mat-cell *matCellDef="let element" class="id-cell"> {{element.id}} </td>
+        <th mat-header-cell *matHeaderCellDef class="first-column-line">
+          <div class="header-content center-gap">
+            <span>International <br> Reference Number</span>
+            <mat-icon class="sort-icon-custom">import_export</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element" class="id-cell-styled first-column-line"> {{element.id}} </td>
       </ng-container>
 
       <ng-container matColumnDef="type">
-        <th mat-header-cell *matHeaderCellDef> Application data for <mat-icon class="sort-icon">import_export</mat-icon> </th>
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Application data for</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
         <td mat-cell *matCellDef="let element"> {{element.type}} </td>
       </ng-container>
 
       <ng-container matColumnDef="modified">
-        <th mat-header-cell *matHeaderCellDef> Modified on <mat-icon class="sort-icon">import_export</mat-icon> </th>
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Modified on</span>
+            <mat-icon class="sort-icon-custom">import_export</mat-icon>
+          </div>
+        </th>
         <td mat-cell *matCellDef="let element"> {{element.modified}} </td>
       </ng-container>
 
       <ng-container matColumnDef="crop">
-        <th mat-header-cell *matHeaderCellDef> Crop <mat-icon class="sort-icon">import_export</mat-icon> </th>
-        <td mat-cell *matCellDef="let element" class="botanical"> {{element.crop}} </td>
+        <th mat-header-cell *matHeaderCellDef class="crop-col-width">
+          <div class="header-content center-gap">
+            <span>Crop</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element" class="botanical-text"> {{element.crop}} </td>
       </ng-container>
 
       <ng-container matColumnDef="denomination">
-        <th mat-header-cell *matHeaderCellDef> Proposed variety <br> denomination <mat-icon class="sort-icon">import_export</mat-icon> </th>
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Proposed variety <br> denomination</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
         <td mat-cell *matCellDef="let element"> {{element.denomination}} </td>
       </ng-container>
 
       <ng-container matColumnDef="reference">
-        <th mat-header-cell *matHeaderCellDef> Breeder/Submitter <br> reference <mat-icon class="sort-icon">import_export</mat-icon> </th>
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Breeder/Submitter <br> reference</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
         <td mat-cell *matCellDef="let element"> {{element.reference}} </td>
       </ng-container>
 
       <ng-container matColumnDef="actions" stickyEnd>
-        <th mat-header-cell *matHeaderCellDef class="sticky-action"> Actions </th>
-        <td mat-cell *matCellDef="let element" class="sticky-action">
-          <button mat-icon-button class="small-icon"><mat-icon>more_horiz</mat-icon></button>
+        <th mat-header-cell *matHeaderCellDef class="sticky-action-header"> Actions </th>
+        <td mat-cell *matCellDef="let element" class="sticky-action-cell">
+          <mat-icon class="action-dots">more_horiz</mat-icon>
         </td>
       </ng-container>
 

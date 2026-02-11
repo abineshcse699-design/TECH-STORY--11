@@ -1,0 +1,108 @@
+<div class="crt-container">
+  <div class="header-toolbar">
+    <div class="tabs-side">
+      <div class="tab active">In Progress (5)</div>
+      <div class="tab">Submitted (3)</div>
+    </div>
+    <div class="actions-side">
+      <div class="toolbar-item">
+        <mat-icon class="header-icon">filter_list</mat-icon>
+        <span class="link-text">Show filters</span>
+      </div>
+      <div class="toolbar-item">
+        <mat-icon class="header-icon">view_column</mat-icon>
+        <span class="link-text">Columns</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-outer-wrapper">
+    <table mat-table [dataSource]="dataSource" class="perfect-crt-table">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="first-column-line">
+          <div class="header-content center-gap">
+            <span>International <br> Reference Number</span>
+            <mat-icon class="sort-icon-custom">import_export</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element" class="id-cell-styled first-column-line"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Application data for</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="modified">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Modified on</span>
+            <mat-icon class="sort-icon-custom">import_export</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.modified}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="crop">
+        <th mat-header-cell *matHeaderCellDef class="crop-col-width">
+          <div class="header-content center-gap">
+            <span>Crop</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element" class="botanical-text"> {{element.crop}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="denomination">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Proposed variety <br> denomination</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.denomination}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="reference">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="header-content center-gap">
+            <span>Breeder/Submitter <br> reference</span>
+            <mat-icon class="sort-icon-custom">sort</mat-icon>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.reference}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef class="sticky-action-header"> Actions </th>
+        <td mat-cell *matCellDef="let element" class="sticky-action-cell">
+          <mat-icon class="action-dots">more_horiz</mat-icon>
+        </td>
+      </ng-container>
+
+      <ng-container *ngFor="let col of filterColumns" [matColumnDef]="col.filterDef">
+        <th mat-header-cell *matHeaderCellDef class="filter-cell" [class.first-column-line]="col.filterDef === 'id-filter'">
+          <div class="filter-input-wrapper" *ngIf="col.filterDef !== 'actions-filter'">
+            <input matInput [placeholder]="col.placeholder" class="custom-filter-input">
+            <mat-icon *ngIf="col.filterDef === 'modified-filter'" class="calendar-icon">calendar_today</mat-icon>
+          </div>
+        </th>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="filterDisplayColumns" class="filter-row"></tr>
+
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+
+<div class="progress-container">
+  <div class="progress-fill" style="width: 35%;"></div>
+</div>

@@ -1,0 +1,9 @@
+.green-title {
+  color: #2d5a27;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgb(239, 239, 121);
+  margin: 10px 0 12px 0;
+  font-size: 15px;
+  display: inline-block;
+}

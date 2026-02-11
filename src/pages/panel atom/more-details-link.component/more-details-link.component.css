@@ -1,0 +1,14 @@
+.upov-more-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #163A30;
+  cursor: pointer;
+
+  text-decoration: underline;
+  text-decoration-color: #E0F048;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}

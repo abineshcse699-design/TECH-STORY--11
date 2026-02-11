@@ -1,0 +1,12 @@
+<button
+  [ngClass]="{
+    'text-btn': variant === 'text',
+    'outline-btn': variant === 'outline',
+    'primary-btn': variant === 'primary'
+  }"
+  [disabled]="disabled"
+  (click)="onClick()"
+  mat-button
+>
+  <ng-content></ng-content>
+</button>

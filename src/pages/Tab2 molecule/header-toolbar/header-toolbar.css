@@ -1,0 +1,10 @@
+
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #c5d1d1;
+  background-color: #f8f9f9;
+  padding: 0 5px;
+}

@@ -1,0 +1,18 @@
+.upov-primary-btn {
+  background-color: #163A30;
+  color: white;
+  border-radius: 20px;
+  padding: 0 18px;
+  height: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.upov-primary-btn:hover {
+  opacity: 0.9;
+}

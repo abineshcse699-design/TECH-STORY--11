@@ -1,0 +1,238 @@
+.crt-container{
+  width: 90%;
+}
+/* Container for the whole top section */
+.header-toolbar {
+  display: flex;
+  justify-content: space-between; /* Pushes tabs to left, actions to right */
+  align-items: flex-end; /* Aligns text to the bottom line */
+  border-bottom: 1px solid #c5d1d1; /* The light gray horizontal line */
+  background-color: #f8f9f9;
+  padding: 0 5px;
+  width: 100%;
+}
+
+/* --- Left Side: Tabs --- */
+.tabs-side {
+  display: flex;
+  gap: 5px; /* Tight gap between tabs */
+}
+
+.tab {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5d6d6e; 
+  transition: all 0.2s ease;
+}
+
+.tab.active {
+  color: #2d5a27; 
+  border-bottom: 3px solid #2d5a27; /* The thick green active line */
+  margin-bottom: -1px; /* Overlaps the gray border perfectly */
+}
+
+/* --- Right Side: Actions (Filter & Columns) --- */
+.actions-side {
+  display: flex;
+  gap: 20px; 
+  padding-bottom: 10px; 
+}
+
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Gap between the icon and the text */
+  cursor: pointer;
+}
+
+.header-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: #4a5a5a; /* Gray color for icons */
+}
+
+.link-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f3d3d; /* Dark green text */
+  text-decoration: underline;
+ text-decoration-thickness: 2px;
+  text-decoration-color: #d4e157 !important; 
+  text-underline-offset: 3px;
+}
+
+/* Hover effect for better UX */
+.toolbar-item:hover .link-text {
+  color: #1b3d18;
+}
+
+
+.small-filter .custom-filter-input {
+  width: 120px;
+
+ /* Adjust to 160px / 200px if needed */
+}
+
+
+
+/* --- HEADER ALIGNMENT & GAP --- */
+.header-content.center-gap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This creates the wide gap between text and icon */
+  width: 100%;
+  white-space: pre-line;
+  height: 55px;
+  line-height: 1.2;
+}
+
+.sort-icon-custom {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #9eb1b1; 
+  margin-left: 10px;
+}
+
+/* --- VERTICAL CENTER LINE --- */
+.first-column-line {
+  border-right: 1px solid #e0e0e0 !important; 
+  padding-right: 12px !important;
+}
+
+/* --- TABLE STYLING --- */
+.perfect-crt-table {
+  width: 100%;
+  background: white;
+}
+
+.mat-mdc-header-cell {
+  background-color: white !important;
+  color: #333 !important;
+  font-weight: 700 !important;
+  padding: 0 10px !important;
+}
+
+.mat-mdc-cell {
+  padding: 0 10px !important;
+  font-size: 13px;
+}
+
+/* --- ACTIONS STICKY SHADOW --- */
+.sticky-action-cell {
+  background-color: white !important;
+  border-left: 1px solid #eee !important;
+  box-shadow: -8px 0 12px -10px rgba(0,0,0,0.4) !important; 
+}
+
+/* --- VISUAL DETAILS --- */
+.id-cell-styled {
+  color: #1b3d18;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #d4e157 ;
+  text-decoration-thickness: 1.5px;
+
+}
+
+/* .botanical-text { font-style: italic; } */
+.crop-col-width { min-width: 320px !important; }
+.action-dots { color: #2d5a27; cursor: pointer; }
+
+/* Density Controls */
+::ng-deep .perfect-crt-table .mat-mdc-header-row { height: 60px !important; }
+::ng-deep .perfect-crt-table .mat-mdc-row { height: 38px !important; }
+
+
+/* ... Keep your existing CSS ... */
+/* --- FILTER ROW STYLING --- */
+
+.filter-row {
+  height: 52px !important;
+  background-color: white;
+  /* This creates the shadow line under the entire row as seen in your image */
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.15);
+}
+
+.filter-cell {
+  padding: 0 8px 12px 8px !important; /* Bottom padding to create space for the shadow */
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.filter-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-filter-input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #c5d1d1;
+  border-radius: 4px; /* More rectangular like the image */
+  padding: 0 10px;
+
+  font-size: 13px;
+  color: #333;
+  background-color: white;
+  outline: none;
+  /* Inner shadow for the input box depth */
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  transition: border-color 0.2s;
+}
+
+.custom-filter-input::placeholder {
+  /* color: #9eb1b1; */
+}
+
+.custom-filter-input:focus {
+  border-color: #2d5a27;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05), 0 0 4px rgba(45, 90, 39, 0.2);
+}
+
+/* Calendar icon inside the Modified filter */
+.calendar-icon {
+  position: absolute;
+  right: 8px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: #5d6d6e;
+}
+
+/* To ensure the "Actions" area doesn't have an input but keeps the row shadow */
+.actions-filter-cell {
+  background-color: white !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+/* Match the first column vertical divider in the filter row */
+.filter-cell.first-column-line {
+  border-right: 1px solid #e0e0e0 !important;
+}
+
+
+
+/* The background track of the progress bar */
+.progress-container {
+  width: 65%;
+  height: 13px; /* Slim height as seen in the image */
+  background-color: #e9ecef; /* Light gray track */
+  border-radius: 10px; /* Fully rounded corners */
+  overflow: hidden;
+  /* margin: 10px 0; */
+  margin-left: 12%;
+  margin-top: 10px;
+
+}
+
+/* The actual colored progress */
+.progress-fill {
+  height: 100%;
+  background-color: #1f3d3d; /* Dark teal/forest green color from the image */
+  border-radius: 10px; /* Ensures the leading edge is also rounded */
+  transition: width 0.3s ease-in-out; /* Smooth movement */
+}
